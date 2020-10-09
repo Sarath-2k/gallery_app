@@ -10,6 +10,7 @@ import 'package:video_player/video_player.dart';
 
 void main() {
   runApp(MyApp());
+  
 }
 
 class MyApp extends StatefulWidget {
@@ -55,10 +56,8 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData.dark(),
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Photo gallery example'),
-        ),
         body: _loading
             ? Center(
                 child: CircularProgressIndicator(),
@@ -168,6 +167,7 @@ class AlbumPageState extends State<AlbumPage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData.dark(),
       home: Scaffold(
         appBar: AppBar(
           leading: IconButton(
@@ -215,6 +215,8 @@ class ViewerPage extends StatelessWidget {
   Widget build(BuildContext context) {
     DateTime date = medium.creationDate ?? medium.modifiedDate;
     return MaterialApp(
+      
+      theme: ThemeData.dark(),
       home: Scaffold(
         appBar: AppBar(
           leading: IconButton(
