@@ -56,6 +56,12 @@
       "languageVersion": "2.9"
     },
     {
+      "name": "flutter_share",
+      "rootUri": "file:///C:/Users/sarat/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_share-1.0.2+1",
+      "packageUri": "lib/",
+      "languageVersion": "2.1"
+    },
+    {
       "name": "flutter_test",
       "rootUri": "file:///C:/Users/sarat/Documents/flutter/packages/flutter_test",
       "packageUri": "lib/",
@@ -194,7 +200,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2020-10-07T22:31:56.068955Z",
+  "generated": "2020-10-10T00:26:28.926504Z",
   "generator": "pub",
   "generatorVersion": "2.9.2"
 }
