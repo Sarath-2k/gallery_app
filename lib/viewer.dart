@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:photo_gallery/photo_gallery.dart';
 import 'package:transparent_image/transparent_image.dart';
 import 'package:video_player/video_player.dart';
-import 'package:flutter_share/flutter_share.dart';
 
 class ViewerPage extends StatelessWidget {
   final Medium medium;
@@ -29,7 +28,7 @@ class ViewerPage extends StatelessWidget {
           actions: [
             IconButton(
               icon:Icon(Icons.share),
-              onPressed: shareFile,
+              onPressed: (){},
               )
           ],
         ),
