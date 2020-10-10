@@ -35,112 +35,77 @@
 26-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:10:5-49:19
 27        android:name="io.flutter.app.FlutterApplication"
 27-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:12:9-57
-28        android:allowBackup="true"
-28-->[com.droidninja:filepicker:2.2.1] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\88f69513faf455e4813ae48009c9fdd8\filepicker-2.2.1\AndroidManifest.xml:15:9-35
-29        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-29-->[androidx.core:core:1.1.0] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\a528b13ac93e64cafa3d0480e2c93207\core-1.1.0\AndroidManifest.xml:24:18-86
-30        android:debuggable="true"
-31        android:icon="@mipmap/ic_launcher"
-31-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:14:9-43
-32        android:label="gallery_app"
-32-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:13:9-36
-33        android:requestLegacyExternalStorage="true"
-33-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:11:9-52
-34        android:supportsRtl="true" >
-34-->[com.droidninja:filepicker:2.2.1] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\88f69513faf455e4813ae48009c9fdd8\filepicker-2.2.1\AndroidManifest.xml:16:9-35
-35        <activity
-35-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:15:9-43:20
-36            android:name="com.example.gallery_app.MainActivity"
-36-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:16:13-41
-37            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
-37-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:19:13-163
-38            android:hardwareAccelerated="true"
-38-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:20:13-47
-39            android:launchMode="singleTop"
-39-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:17:13-43
-40            android:theme="@style/LaunchTheme"
-40-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:18:13-47
-41            android:windowSoftInputMode="adjustResize" >
-41-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:21:13-55
-42
-43            <!--
-44                 Specifies an Android theme to apply to this Activity as soon as
-45                 the Android process has started. This theme is visible to the user
-46                 while the Flutter UI initializes. After that, this theme continues
-47                 to determine the Window background behind the Flutter UI.
-48            -->
-49            <meta-data
-49-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:26:13-29:17
-50                android:name="io.flutter.embedding.android.NormalTheme"
-50-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:27:15-70
-51                android:resource="@style/NormalTheme" />
-51-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:28:15-52
-52            <!--
-53                 Displays an Android View that continues showing the launch screen
-54                 Drawable until Flutter paints its first frame, then this splash
-55                 screen fades out. A splash screen is useful to avoid any visual
-56                 gap between the end of Android's launch screen and the painting of
-57                 Flutter's first frame.
-58            -->
-59            <meta-data
-59-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:35:13-38:17
-60                android:name="io.flutter.embedding.android.SplashScreenDrawable"
-60-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:36:15-79
-61                android:resource="@drawable/launch_background" />
-61-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:37:15-61
-62
-63            <intent-filter>
-63-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:39:13-42:29
-64                <action android:name="android.intent.action.MAIN" />
-64-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:40:17-68
-64-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:40:25-66
-65
-66                <category android:name="android.intent.category.LAUNCHER" />
-66-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:41:17-76
-66-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:41:27-74
-67            </intent-filter>
-68        </activity>
-69        <!--
-70             Don't delete the meta-data below.
-71             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
-72        -->
-73        <meta-data
-73-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:46:9-48:33
-74            android:name="flutterEmbedding"
-74-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:47:13-44
-75            android:value="2" />
-75-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:48:13-30
-76
-77        <activity
-77-->[com.droidninja:filepicker:2.2.1] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\88f69513faf455e4813ae48009c9fdd8\filepicker-2.2.1\AndroidManifest.xml:17:9-19:62
-78            android:name="droidninja.filepicker.FilePickerActivity"
-78-->[com.droidninja:filepicker:2.2.1] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\88f69513faf455e4813ae48009c9fdd8\filepicker-2.2.1\AndroidManifest.xml:18:13-68
-79            android:configChanges="orientation|screenSize" />
-79-->[com.droidninja:filepicker:2.2.1] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\88f69513faf455e4813ae48009c9fdd8\filepicker-2.2.1\AndroidManifest.xml:19:13-59
-80        <activity
-80-->[com.droidninja:filepicker:2.2.1] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\88f69513faf455e4813ae48009c9fdd8\filepicker-2.2.1\AndroidManifest.xml:20:9-22:62
-81            android:name="droidninja.filepicker.MediaDetailsActivity"
-81-->[com.droidninja:filepicker:2.2.1] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\88f69513faf455e4813ae48009c9fdd8\filepicker-2.2.1\AndroidManifest.xml:21:13-70
-82            android:configChanges="orientation|screenSize" />
-82-->[com.droidninja:filepicker:2.2.1] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\88f69513faf455e4813ae48009c9fdd8\filepicker-2.2.1\AndroidManifest.xml:22:13-59
-83
-84        <provider
-84-->[com.droidninja:filepicker:2.2.1] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\88f69513faf455e4813ae48009c9fdd8\filepicker-2.2.1\AndroidManifest.xml:24:9-32:20
-85            android:name="droidninja.filepicker.utils.FilePickerProvider"
-85-->[com.droidninja:filepicker:2.2.1] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\88f69513faf455e4813ae48009c9fdd8\filepicker-2.2.1\AndroidManifest.xml:25:13-74
-86            android:authorities="com.example.gallery_app.droidninja.filepicker.provider"
-86-->[com.droidninja:filepicker:2.2.1] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\88f69513faf455e4813ae48009c9fdd8\filepicker-2.2.1\AndroidManifest.xml:26:13-82
-87            android:exported="false"
-87-->[com.droidninja:filepicker:2.2.1] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\88f69513faf455e4813ae48009c9fdd8\filepicker-2.2.1\AndroidManifest.xml:27:13-37
-88            android:grantUriPermissions="true" >
-88-->[com.droidninja:filepicker:2.2.1] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\88f69513faf455e4813ae48009c9fdd8\filepicker-2.2.1\AndroidManifest.xml:28:13-47
-89            <meta-data
-89-->[com.droidninja:filepicker:2.2.1] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\88f69513faf455e4813ae48009c9fdd8\filepicker-2.2.1\AndroidManifest.xml:29:13-31:58
-90                android:name="android.support.FILE_PROVIDER_PATHS"
-90-->[com.droidninja:filepicker:2.2.1] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\88f69513faf455e4813ae48009c9fdd8\filepicker-2.2.1\AndroidManifest.xml:30:17-67
-91                android:resource="@xml/provider_paths" />
-91-->[com.droidninja:filepicker:2.2.1] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\88f69513faf455e4813ae48009c9fdd8\filepicker-2.2.1\AndroidManifest.xml:31:17-55
-92        </provider>
-93    </application>
-94
-95</manifest>
+28        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+28-->[androidx.core:core:1.1.0] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\a528b13ac93e64cafa3d0480e2c93207\core-1.1.0\AndroidManifest.xml:24:18-86
+29        android:debuggable="true"
+30        android:icon="@mipmap/ic_launcher"
+30-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:14:9-43
+31        android:label="gallery_app"
+31-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:13:9-36
+32        android:requestLegacyExternalStorage="true" >
+32-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:11:9-52
+33        <activity
+33-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:15:9-43:20
+34            android:name="com.example.gallery_app.MainActivity"
+34-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:16:13-41
+35            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+35-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:19:13-163
+36            android:hardwareAccelerated="true"
+36-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:20:13-47
+37            android:launchMode="singleTop"
+37-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:17:13-43
+38            android:theme="@style/LaunchTheme"
+38-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:18:13-47
+39            android:windowSoftInputMode="adjustResize" >
+39-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:21:13-55
+40
+41            <!--
+42                 Specifies an Android theme to apply to this Activity as soon as
+43                 the Android process has started. This theme is visible to the user
+44                 while the Flutter UI initializes. After that, this theme continues
+45                 to determine the Window background behind the Flutter UI.
+46            -->
+47            <meta-data
+47-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:26:13-29:17
+48                android:name="io.flutter.embedding.android.NormalTheme"
+48-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:27:15-70
+49                android:resource="@style/NormalTheme" />
+49-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:28:15-52
+50            <!--
+51                 Displays an Android View that continues showing the launch screen
+52                 Drawable until Flutter paints its first frame, then this splash
+53                 screen fades out. A splash screen is useful to avoid any visual
+54                 gap between the end of Android's launch screen and the painting of
+55                 Flutter's first frame.
+56            -->
+57            <meta-data
+57-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:35:13-38:17
+58                android:name="io.flutter.embedding.android.SplashScreenDrawable"
+58-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:36:15-79
+59                android:resource="@drawable/launch_background" />
+59-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:37:15-61
+60
+61            <intent-filter>
+61-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:39:13-42:29
+62                <action android:name="android.intent.action.MAIN" />
+62-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:40:17-68
+62-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:40:25-66
+63
+64                <category android:name="android.intent.category.LAUNCHER" />
+64-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:41:17-76
+64-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:41:27-74
+65            </intent-filter>
+66        </activity>
+67        <!--
+68             Don't delete the meta-data below.
+69             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+70        -->
+71        <meta-data
+71-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:46:9-48:33
+72            android:name="flutterEmbedding"
+72-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:47:13-44
+73            android:value="2" />
+73-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:48:13-30
+74    </application>
+75
+76</manifest>
