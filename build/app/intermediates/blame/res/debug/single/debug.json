@@ -28,6 +28,10 @@
         "source": "C:\\Users\\sarat\\.gradle\\caches\\transforms-2\\files-2.1\\db2388f0fe5e05a7a168e5a9c11e912f\\material-1.0.0\\res\\layout\\mtrl_layout_snackbar.xml"
     },
     {
+        "merged": "C:\\Users\\sarat\\Documents\\GitHub\\gallery_app\\build\\app\\intermediates\\res\\merged\\debug\\layout_notification_template_lines_media.xml.flat",
+        "source": "C:\\Users\\sarat\\.gradle\\caches\\transforms-2\\files-2.1\\f7471872deb216fb2a14e2fba12c137a\\media-1.0.0-beta01\\res\\layout\\notification_template_lines_media.xml"
+    },
+    {
         "merged": "C:\\Users\\sarat\\Documents\\GitHub\\gallery_app\\build\\app\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
         "source": "C:\\Users\\sarat\\.gradle\\caches\\transforms-2\\files-2.1\\dd2ecfcfb369a2f0046b9c1c6d80939e\\appcompat-1.0.2\\res\\drawable-xhdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
     },
@@ -356,12 +360,12 @@
         "source": "C:\\Users\\sarat\\.gradle\\caches\\transforms-2\\files-2.1\\dd2ecfcfb369a2f0046b9c1c6d80939e\\appcompat-1.0.2\\res\\anim\\abc_slide_in_bottom.xml"
     },
     {
-        "merged": "C:\\Users\\sarat\\Documents\\GitHub\\gallery_app\\build\\app\\intermediates\\res\\merged\\debug\\color_mtrl_bottom_nav_item_tint.xml.flat",
-        "source": "C:\\Users\\sarat\\.gradle\\caches\\transforms-2\\files-2.1\\db2388f0fe5e05a7a168e5a9c11e912f\\material-1.0.0\\res\\color\\mtrl_bottom_nav_item_tint.xml"
-    },
-    {
         "merged": "C:\\Users\\sarat\\Documents\\GitHub\\gallery_app\\build\\app\\intermediates\\res\\merged\\debug\\drawable_abc_spinner_textfield_background_material.xml.flat",
         "source": "C:\\Users\\sarat\\.gradle\\caches\\transforms-2\\files-2.1\\dd2ecfcfb369a2f0046b9c1c6d80939e\\appcompat-1.0.2\\res\\drawable\\abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\sarat\\Documents\\GitHub\\gallery_app\\build\\app\\intermediates\\res\\merged\\debug\\color_mtrl_bottom_nav_item_tint.xml.flat",
+        "source": "C:\\Users\\sarat\\.gradle\\caches\\transforms-2\\files-2.1\\db2388f0fe5e05a7a168e5a9c11e912f\\material-1.0.0\\res\\color\\mtrl_bottom_nav_item_tint.xml"
     },
     {
         "merged": "C:\\Users\\sarat\\Documents\\GitHub\\gallery_app\\build\\app\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_list_pressed_holo_dark.9.png.flat",
@@ -872,6 +876,10 @@
         "source": "C:\\Users\\sarat\\.gradle\\caches\\transforms-2\\files-2.1\\dd2ecfcfb369a2f0046b9c1c6d80939e\\appcompat-1.0.2\\res\\drawable-hdpi-v4\\abc_list_selector_disabled_holo_dark.9.png"
     },
     {
+        "merged": "C:\\Users\\sarat\\Documents\\GitHub\\gallery_app\\build\\app\\intermediates\\res\\merged\\debug\\layout_notification_template_big_media_custom.xml.flat",
+        "source": "C:\\Users\\sarat\\.gradle\\caches\\transforms-2\\files-2.1\\f7471872deb216fb2a14e2fba12c137a\\media-1.0.0-beta01\\res\\layout\\notification_template_big_media_custom.xml"
+    },
+    {
         "merged": "C:\\Users\\sarat\\Documents\\GitHub\\gallery_app\\build\\app\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_list_pressed_holo_dark.9.png.flat",
         "source": "C:\\Users\\sarat\\.gradle\\caches\\transforms-2\\files-2.1\\dd2ecfcfb369a2f0046b9c1c6d80939e\\appcompat-1.0.2\\res\\drawable-xxhdpi-v4\\abc_list_pressed_holo_dark.9.png"
     },
@@ -1202,6 +1210,14 @@
     {
         "merged": "C:\\Users\\sarat\\Documents\\GitHub\\gallery_app\\build\\app\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
         "source": "C:\\Users\\sarat\\.gradle\\caches\\transforms-2\\files-2.1\\dd2ecfcfb369a2f0046b9c1c6d80939e\\appcompat-1.0.2\\res\\drawable-xxhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png"
+    },
+    {
+        "merged": "C:\\Users\\sarat\\Documents\\GitHub\\gallery_app\\build\\app\\intermediates\\res\\merged\\debug\\layout_notification_media_action.xml.flat",
+        "source": "C:\\Users\\sarat\\.gradle\\caches\\transforms-2\\files-2.1\\f7471872deb216fb2a14e2fba12c137a\\media-1.0.0-beta01\\res\\layout\\notification_media_action.xml"
+    },
+    {
+        "merged": "C:\\Users\\sarat\\Documents\\GitHub\\gallery_app\\build\\app\\intermediates\\res\\merged\\debug\\layout_notification_template_big_media_narrow_custom.xml.flat",
+        "source": "C:\\Users\\sarat\\.gradle\\caches\\transforms-2\\files-2.1\\f7471872deb216fb2a14e2fba12c137a\\media-1.0.0-beta01\\res\\layout\\notification_template_big_media_narrow_custom.xml"
     },
     {
         "merged": "C:\\Users\\sarat\\Documents\\GitHub\\gallery_app\\build\\app\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_star_half_black_48dp.png.flat",
@@ -1648,6 +1664,10 @@
         "source": "C:\\Users\\sarat\\Documents\\GitHub\\gallery_app\\android\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
+        "merged": "C:\\Users\\sarat\\Documents\\GitHub\\gallery_app\\build\\app\\intermediates\\res\\merged\\debug\\xml_esys_flutter_share_filepaths.xml.flat",
+        "source": "C:\\Users\\sarat\\Documents\\GitHub\\gallery_app\\build\\esys_flutter_share\\intermediates\\packaged_res\\debug\\xml\\esys_flutter_share_filepaths.xml"
+    },
+    {
         "merged": "C:\\Users\\sarat\\Documents\\GitHub\\gallery_app\\build\\app\\intermediates\\res\\merged\\debug\\drawable-v21_design_bottom_navigation_item_background.xml.flat",
         "source": "C:\\Users\\sarat\\.gradle\\caches\\transforms-2\\files-2.1\\db2388f0fe5e05a7a168e5a9c11e912f\\material-1.0.0\\res\\drawable-v21\\design_bottom_navigation_item_background.xml"
     },
@@ -1682,6 +1702,10 @@
     {
         "merged": "C:\\Users\\sarat\\Documents\\GitHub\\gallery_app\\build\\app\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_list_focused_holo.9.png.flat",
         "source": "C:\\Users\\sarat\\.gradle\\caches\\transforms-2\\files-2.1\\dd2ecfcfb369a2f0046b9c1c6d80939e\\appcompat-1.0.2\\res\\drawable-mdpi-v4\\abc_list_focused_holo.9.png"
+    },
+    {
+        "merged": "C:\\Users\\sarat\\Documents\\GitHub\\gallery_app\\build\\app\\intermediates\\res\\merged\\debug\\layout_notification_media_cancel_action.xml.flat",
+        "source": "C:\\Users\\sarat\\.gradle\\caches\\transforms-2\\files-2.1\\f7471872deb216fb2a14e2fba12c137a\\media-1.0.0-beta01\\res\\layout\\notification_media_cancel_action.xml"
     },
     {
         "merged": "C:\\Users\\sarat\\Documents\\GitHub\\gallery_app\\build\\app\\intermediates\\res\\merged\\debug\\color_mtrl_btn_text_color_selector.xml.flat",
@@ -1816,6 +1840,10 @@
         "source": "C:\\Users\\sarat\\.gradle\\caches\\transforms-2\\files-2.1\\db2388f0fe5e05a7a168e5a9c11e912f\\material-1.0.0\\res\\drawable\\ic_mtrl_chip_checked_black.xml"
     },
     {
+        "merged": "C:\\Users\\sarat\\Documents\\GitHub\\gallery_app\\build\\app\\intermediates\\res\\merged\\debug\\layout_notification_template_media.xml.flat",
+        "source": "C:\\Users\\sarat\\.gradle\\caches\\transforms-2\\files-2.1\\f7471872deb216fb2a14e2fba12c137a\\media-1.0.0-beta01\\res\\layout\\notification_template_media.xml"
+    },
+    {
         "merged": "C:\\Users\\sarat\\Documents\\GitHub\\gallery_app\\build\\app\\intermediates\\res\\merged\\debug\\color_abc_tint_default.xml.flat",
         "source": "C:\\Users\\sarat\\.gradle\\caches\\transforms-2\\files-2.1\\dd2ecfcfb369a2f0046b9c1c6d80939e\\appcompat-1.0.2\\res\\color\\abc_tint_default.xml"
     },
@@ -1920,6 +1948,10 @@
         "source": "C:\\Users\\sarat\\.gradle\\caches\\transforms-2\\files-2.1\\db2388f0fe5e05a7a168e5a9c11e912f\\material-1.0.0\\res\\anim\\design_bottom_sheet_slide_in.xml"
     },
     {
+        "merged": "C:\\Users\\sarat\\Documents\\GitHub\\gallery_app\\build\\app\\intermediates\\res\\merged\\debug\\layout_notification_template_big_media_narrow.xml.flat",
+        "source": "C:\\Users\\sarat\\.gradle\\caches\\transforms-2\\files-2.1\\f7471872deb216fb2a14e2fba12c137a\\media-1.0.0-beta01\\res\\layout\\notification_template_big_media_narrow.xml"
+    },
+    {
         "merged": "C:\\Users\\sarat\\Documents\\GitHub\\gallery_app\\build\\app\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_scrubber_control_off_mtrl_alpha.png.flat",
         "source": "C:\\Users\\sarat\\.gradle\\caches\\transforms-2\\files-2.1\\dd2ecfcfb369a2f0046b9c1c6d80939e\\appcompat-1.0.2\\res\\drawable-xxhdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png"
     },
@@ -1950,6 +1982,10 @@
     {
         "merged": "C:\\Users\\sarat\\Documents\\GitHub\\gallery_app\\build\\app\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_notification_bg_low_normal.9.png.flat",
         "source": "C:\\Users\\sarat\\.gradle\\caches\\transforms-2\\files-2.1\\a528b13ac93e64cafa3d0480e2c93207\\core-1.1.0\\res\\drawable-mdpi-v4\\notification_bg_low_normal.9.png"
+    },
+    {
+        "merged": "C:\\Users\\sarat\\Documents\\GitHub\\gallery_app\\build\\app\\intermediates\\res\\merged\\debug\\layout_notification_template_media_custom.xml.flat",
+        "source": "C:\\Users\\sarat\\.gradle\\caches\\transforms-2\\files-2.1\\f7471872deb216fb2a14e2fba12c137a\\media-1.0.0-beta01\\res\\layout\\notification_template_media_custom.xml"
     },
     {
         "merged": "C:\\Users\\sarat\\Documents\\GitHub\\gallery_app\\build\\app\\intermediates\\res\\merged\\debug\\layout_abc_expanded_menu_layout.xml.flat",
@@ -1986,6 +2022,10 @@
     {
         "merged": "C:\\Users\\sarat\\Documents\\GitHub\\gallery_app\\build\\app\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_spinner_mtrl_am_alpha.9.png.flat",
         "source": "C:\\Users\\sarat\\.gradle\\caches\\transforms-2\\files-2.1\\dd2ecfcfb369a2f0046b9c1c6d80939e\\appcompat-1.0.2\\res\\drawable-hdpi-v4\\abc_spinner_mtrl_am_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Users\\sarat\\Documents\\GitHub\\gallery_app\\build\\app\\intermediates\\res\\merged\\debug\\layout_notification_template_big_media.xml.flat",
+        "source": "C:\\Users\\sarat\\.gradle\\caches\\transforms-2\\files-2.1\\f7471872deb216fb2a14e2fba12c137a\\media-1.0.0-beta01\\res\\layout\\notification_template_big_media.xml"
     },
     {
         "merged": "C:\\Users\\sarat\\Documents\\GitHub\\gallery_app\\build\\app\\intermediates\\res\\merged\\debug\\interpolator-v21_mtrl_fast_out_linear_in.xml.flat",

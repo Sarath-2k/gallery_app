@@ -6,10 +6,13 @@ INJECTED from C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\A
 INJECTED from C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:1:1-50:12
 MERGED from C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:1:1-50:12
 MERGED from [:video_player] C:\Users\sarat\Documents\GitHub\gallery_app\build\video_player\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:esys_flutter_share] C:\Users\sarat\Documents\GitHub\gallery_app\build\esys_flutter_share\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-19:12
 MERGED from [:permission_handler] C:\Users\sarat\Documents\GitHub\gallery_app\build\permission_handler\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:flutter_share] C:\Users\sarat\Documents\GitHub\gallery_app\build\flutter_share\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:path_provider] C:\Users\sarat\Documents\GitHub\gallery_app\build\path_provider\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:documents_picker] C:\Users\sarat\Documents\GitHub\gallery_app\build\documents_picker\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:photo_gallery] C:\Users\sarat\Documents\GitHub\gallery_app\build\photo_gallery\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0-beta01] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\17ce7f00646148aa2b1737ceea11e62c\legacy-support-v4-1.0.0-beta01\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\db2388f0fe5e05a7a168e5a9c11e912f\material-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat:1.0.2] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\dd2ecfcfb369a2f0046b9c1c6d80939e\appcompat-1.0.2\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\0986d0d74b8a2c7da8161f6370fc7744\fragment-1.1.0\AndroidManifest.xml:17:1-24:12
@@ -20,6 +23,7 @@ MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\sarat\.gradle\caches\t
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\0f0610cdcf96e6cfa9529b6a3246e3f6\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\e1bbce6b0d79e8479b70e7bd729bb743\loader-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.activity:activity:1.0.0] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\615cab8ad6393a9c868d48761bbea666\activity-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.media:media:1.0.0-beta01] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\f7471872deb216fb2a14e2fba12c137a\media-1.0.0-beta01\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\42bfbc3fff8c8df307a9cfe522bc299e\vectordrawable-1.0.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.transition:transition:1.0.0] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\fea2864cd1008a941e85798b978e31bd\transition-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\ae13efc3dbae5c9ee58d4933337fcd21\coordinatorlayout-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -33,10 +37,10 @@ MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\sarat\.gradle\
 MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\54d8b8735f730e83f07925f758092af3\savedstate-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\23edc849475fdda61367cb003f9b9f93\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\79f9d65ef8b1c716310f666473a689a7\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.google.android.exoplayer:exoplayer-hls:2.9.6] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\f1b7710061150054acc9ebe4ad0c2ca7\jetified-exoplayer-hls-2.9.6\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.exoplayer:exoplayer-dash:2.9.6] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\8492cec35b818fe1d70a72fa840c2980\jetified-exoplayer-dash-2.9.6\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.9.6] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\606396a1c677d13491c0e143a670c48a\jetified-exoplayer-smoothstreaming-2.9.6\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.6] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\3afdfcc7cc5549b06622742717e69bc9\jetified-exoplayer-core-2.9.6\AndroidManifest.xml:17:1-26:12
+MERGED from [com.google.android.exoplayer:exoplayer-hls:2.9.6] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\d96daf0d86d19ae815678249a4d2de07\jetified-exoplayer-hls-2.9.6\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-dash:2.9.6] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\682c471d5caba2ac1851b04cea5b5592\jetified-exoplayer-dash-2.9.6\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.9.6] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\db48eca711115d3b1aff227006fed6a9\jetified-exoplayer-smoothstreaming-2.9.6\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.6] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\e9aa22b8569cdf249df03848394fb6d2\jetified-exoplayer-core-2.9.6\AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\077300052aa327ee6fc9bbb0ce309b24\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\3a7eb299570065a3866b140e1a95969b\versionedparcelable-1.1.0\AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\fefdd83516e8eeb5097956f9d9af4b04\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -78,6 +82,8 @@ MERGED from [com.droidninja:filepicker:2.2.1] C:\Users\sarat\.gradle\caches\tran
 		ADDED from C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:9:22-78
 application
 ADDED from C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:10:5-49:19
+MERGED from [:esys_flutter_share] C:\Users\sarat\Documents\GitHub\gallery_app\build\esys_flutter_share\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-17:19
+MERGED from [:esys_flutter_share] C:\Users\sarat\Documents\GitHub\gallery_app\build\esys_flutter_share\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-17:19
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\db2388f0fe5e05a7a168e5a9c11e912f\material-1.0.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\db2388f0fe5e05a7a168e5a9c11e912f\material-1.0.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.core:core:1.1.0] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\a528b13ac93e64cafa3d0480e2c93207\core-1.1.0\AndroidManifest.xml:24:5-89
@@ -148,14 +154,20 @@ INJECTED from C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\A
 INJECTED from C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml
 MERGED from [:video_player] C:\Users\sarat\Documents\GitHub\gallery_app\build\video_player\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:video_player] C:\Users\sarat\Documents\GitHub\gallery_app\build\video_player\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:esys_flutter_share] C:\Users\sarat\Documents\GitHub\gallery_app\build\esys_flutter_share\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:esys_flutter_share] C:\Users\sarat\Documents\GitHub\gallery_app\build\esys_flutter_share\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:permission_handler] C:\Users\sarat\Documents\GitHub\gallery_app\build\permission_handler\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:permission_handler] C:\Users\sarat\Documents\GitHub\gallery_app\build\permission_handler\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:flutter_share] C:\Users\sarat\Documents\GitHub\gallery_app\build\flutter_share\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:flutter_share] C:\Users\sarat\Documents\GitHub\gallery_app\build\flutter_share\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:path_provider] C:\Users\sarat\Documents\GitHub\gallery_app\build\path_provider\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:path_provider] C:\Users\sarat\Documents\GitHub\gallery_app\build\path_provider\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:documents_picker] C:\Users\sarat\Documents\GitHub\gallery_app\build\documents_picker\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:documents_picker] C:\Users\sarat\Documents\GitHub\gallery_app\build\documents_picker\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:photo_gallery] C:\Users\sarat\Documents\GitHub\gallery_app\build\photo_gallery\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:photo_gallery] C:\Users\sarat\Documents\GitHub\gallery_app\build\photo_gallery\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0-beta01] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\17ce7f00646148aa2b1737ceea11e62c\legacy-support-v4-1.0.0-beta01\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0-beta01] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\17ce7f00646148aa2b1737ceea11e62c\legacy-support-v4-1.0.0-beta01\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\db2388f0fe5e05a7a168e5a9c11e912f\material-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\db2388f0fe5e05a7a168e5a9c11e912f\material-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.appcompat:appcompat:1.0.2] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\dd2ecfcfb369a2f0046b9c1c6d80939e\appcompat-1.0.2\AndroidManifest.xml:20:5-44
@@ -176,6 +188,8 @@ MERGED from [androidx.loader:loader:1.0.0] C:\Users\sarat\.gradle\caches\transfo
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\e1bbce6b0d79e8479b70e7bd729bb743\loader-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.activity:activity:1.0.0] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\615cab8ad6393a9c868d48761bbea666\activity-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.activity:activity:1.0.0] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\615cab8ad6393a9c868d48761bbea666\activity-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.media:media:1.0.0-beta01] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\f7471872deb216fb2a14e2fba12c137a\media-1.0.0-beta01\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0-beta01] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\f7471872deb216fb2a14e2fba12c137a\media-1.0.0-beta01\AndroidManifest.xml:20:5-44
 MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\42bfbc3fff8c8df307a9cfe522bc299e\vectordrawable-1.0.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\42bfbc3fff8c8df307a9cfe522bc299e\vectordrawable-1.0.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.transition:transition:1.0.0] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\fea2864cd1008a941e85798b978e31bd\transition-1.0.0\AndroidManifest.xml:20:5-44
@@ -202,14 +216,14 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\sarat\.gradle
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\23edc849475fdda61367cb003f9b9f93\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\79f9d65ef8b1c716310f666473a689a7\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\79f9d65ef8b1c716310f666473a689a7\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.exoplayer:exoplayer-hls:2.9.6] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\f1b7710061150054acc9ebe4ad0c2ca7\jetified-exoplayer-hls-2.9.6\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-hls:2.9.6] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\f1b7710061150054acc9ebe4ad0c2ca7\jetified-exoplayer-hls-2.9.6\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-dash:2.9.6] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\8492cec35b818fe1d70a72fa840c2980\jetified-exoplayer-dash-2.9.6\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-dash:2.9.6] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\8492cec35b818fe1d70a72fa840c2980\jetified-exoplayer-dash-2.9.6\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.9.6] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\606396a1c677d13491c0e143a670c48a\jetified-exoplayer-smoothstreaming-2.9.6\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.9.6] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\606396a1c677d13491c0e143a670c48a\jetified-exoplayer-smoothstreaming-2.9.6\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.6] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\3afdfcc7cc5549b06622742717e69bc9\jetified-exoplayer-core-2.9.6\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.6] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\3afdfcc7cc5549b06622742717e69bc9\jetified-exoplayer-core-2.9.6\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-hls:2.9.6] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\d96daf0d86d19ae815678249a4d2de07\jetified-exoplayer-hls-2.9.6\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-hls:2.9.6] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\d96daf0d86d19ae815678249a4d2de07\jetified-exoplayer-hls-2.9.6\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-dash:2.9.6] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\682c471d5caba2ac1851b04cea5b5592\jetified-exoplayer-dash-2.9.6\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-dash:2.9.6] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\682c471d5caba2ac1851b04cea5b5592\jetified-exoplayer-dash-2.9.6\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.9.6] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\db48eca711115d3b1aff227006fed6a9\jetified-exoplayer-smoothstreaming-2.9.6\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.9.6] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\db48eca711115d3b1aff227006fed6a9\jetified-exoplayer-smoothstreaming-2.9.6\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.6] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\e9aa22b8569cdf249df03848394fb6d2\jetified-exoplayer-core-2.9.6\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.6] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\e9aa22b8569cdf249df03848394fb6d2\jetified-exoplayer-core-2.9.6\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\077300052aa327ee6fc9bbb0ce309b24\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\077300052aa327ee6fc9bbb0ce309b24\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\3a7eb299570065a3866b140e1a95969b\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
@@ -242,10 +256,26 @@ uses-permission#android.permission.INTERNET
 ADDED from C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\debug\AndroidManifest.xml:6:5-66
 	android:name
 		ADDED from C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\debug\AndroidManifest.xml:6:22-64
-uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from [com.google.android.exoplayer:exoplayer-core:2.9.6] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\3afdfcc7cc5549b06622742717e69bc9\jetified-exoplayer-core-2.9.6\AndroidManifest.xml:24:5-79
+provider#de.esys.esysfluttershare.EsysFlutterShareFileProvider
+ADDED from [:esys_flutter_share] C:\Users\sarat\Documents\GitHub\gallery_app\build\esys_flutter_share\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-16:20
+	android:grantUriPermissions
+		ADDED from [:esys_flutter_share] C:\Users\sarat\Documents\GitHub\gallery_app\build\esys_flutter_share\intermediates\library_manifest\debug\AndroidManifest.xml:12:13-47
+	android:authorities
+		ADDED from [:esys_flutter_share] C:\Users\sarat\Documents\GitHub\gallery_app\build\esys_flutter_share\intermediates\library_manifest\debug\AndroidManifest.xml:10:13-110
+	android:exported
+		ADDED from [:esys_flutter_share] C:\Users\sarat\Documents\GitHub\gallery_app\build\esys_flutter_share\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-37
 	android:name
-		ADDED from [com.google.android.exoplayer:exoplayer-core:2.9.6] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\3afdfcc7cc5549b06622742717e69bc9\jetified-exoplayer-core-2.9.6\AndroidManifest.xml:24:22-76
+		ADDED from [:esys_flutter_share] C:\Users\sarat\Documents\GitHub\gallery_app\build\esys_flutter_share\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-81
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from [:esys_flutter_share] C:\Users\sarat\Documents\GitHub\gallery_app\build\esys_flutter_share\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-15:72
+	android:resource
+		ADDED from [:esys_flutter_share] C:\Users\sarat\Documents\GitHub\gallery_app\build\esys_flutter_share\intermediates\library_manifest\debug\AndroidManifest.xml:15:17-69
+	android:name
+		ADDED from [:esys_flutter_share] C:\Users\sarat\Documents\GitHub\gallery_app\build\esys_flutter_share\intermediates\library_manifest\debug\AndroidManifest.xml:14:17-67
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.android.exoplayer:exoplayer-core:2.9.6] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\e9aa22b8569cdf249df03848394fb6d2\jetified-exoplayer-core-2.9.6\AndroidManifest.xml:24:5-79
+	android:name
+		ADDED from [com.google.android.exoplayer:exoplayer-core:2.9.6] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\e9aa22b8569cdf249df03848394fb6d2\jetified-exoplayer-core-2.9.6\AndroidManifest.xml:24:22-76
 activity#droidninja.filepicker.FilePickerActivity
 ADDED from [com.droidninja:filepicker:2.2.1] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\88f69513faf455e4813ae48009c9fdd8\filepicker-2.2.1\AndroidManifest.xml:17:9-19:62
 	android:configChanges
@@ -268,9 +298,3 @@ ADDED from [com.droidninja:filepicker:2.2.1] C:\Users\sarat\.gradle\caches\trans
 		ADDED from [com.droidninja:filepicker:2.2.1] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\88f69513faf455e4813ae48009c9fdd8\filepicker-2.2.1\AndroidManifest.xml:27:13-37
 	android:name
 		ADDED from [com.droidninja:filepicker:2.2.1] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\88f69513faf455e4813ae48009c9fdd8\filepicker-2.2.1\AndroidManifest.xml:25:13-74
-meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from [com.droidninja:filepicker:2.2.1] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\88f69513faf455e4813ae48009c9fdd8\filepicker-2.2.1\AndroidManifest.xml:29:13-31:58
-	android:resource
-		ADDED from [com.droidninja:filepicker:2.2.1] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\88f69513faf455e4813ae48009c9fdd8\filepicker-2.2.1\AndroidManifest.xml:31:17-55
-	android:name
-		ADDED from [com.droidninja:filepicker:2.2.1] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\88f69513faf455e4813ae48009c9fdd8\filepicker-2.2.1\AndroidManifest.xml:30:17-67

@@ -1,11 +1,12 @@
-
 import 'dart:io';
 import 'dart:async';
+import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
 import 'package:photo_gallery/photo_gallery.dart';
 import 'package:transparent_image/transparent_image.dart';
 import 'package:video_player/video_player.dart';
+import 'package:esys_flutter_share/esys_flutter_share.dart';
 
 class ViewerPage extends StatelessWidget {
   final Medium medium;
@@ -15,35 +16,40 @@ class ViewerPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     DateTime date = medium.creationDate ?? medium.modifiedDate;
-    return MaterialApp(
-      
-      theme: ThemeData.dark(),
-      home: Scaffold(
-        appBar: AppBar(
-          leading: IconButton(
-            onPressed: () => Navigator.of(context).pop(),
-            icon: Icon(Icons.arrow_back_ios),
-          ),
-          title: Text(date?.toLocal().toString()),
-          actions: [
-            IconButton(
-              icon:Icon(Icons.share),
-              onPressed: (){},
+    return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          onPressed: () => Navigator.of(context).pop(),
+          icon: Icon(Icons.arrow_back_ios),
+        ),
+        title: Text(date?.toLocal().toString()),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.share),
+            onPressed: () async {
+              print(medium.getFile());
+              File file = await medium.getFile();
+              Uint8List imagebytes = await file.readAsBytes().then((value) {
+                Share.file('image', 'image.jpg', value, 'image/jpg',
+                    text: 'My optional text.');
+
+                print("RECIEVEDEDEDEDEDED");
+              });
+            },
+          )
+        ],
+      ),
+      body: Container(
+        alignment: Alignment.center,
+        child: medium.mediumType == MediumType.image
+            ? FadeInImage(
+                fit: BoxFit.cover,
+                placeholder: MemoryImage(kTransparentImage),
+                image: PhotoProvider(mediumId: medium.id),
               )
-          ],
-        ),
-        body: Container(
-          alignment: Alignment.center,
-          child: medium.mediumType == MediumType.image
-              ? FadeInImage(
-                  fit: BoxFit.cover,
-                  placeholder: MemoryImage(kTransparentImage),
-                  image: PhotoProvider(mediumId: medium.id),
-                )
-              : VideoProvider(
-                  mediumId: medium.id,
-                ),
-        ),
+            : VideoProvider(
+                mediumId: medium.id,
+              ),
       ),
     );
   }
