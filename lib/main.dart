@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-// import 'package:flutter_app_lock/flutter_app_lock.dart';
 import 'package:flutter_screen_lock/lock_screen.dart';
 import 'package:local_auth/local_auth.dart';
 import 'package:photo_gallery/photo_gallery.dart';
@@ -7,40 +6,25 @@ import 'package:photo_gallery/photo_gallery.dart';
 import 'home.dart';
 
 void main() {
-  runApp(LockScreenPage());
+  runApp(MyApp());
 }
 
-// void main() {
-//   runApp(AppLock(
-//     builder: (args) => MyApp(),
-//     lockScreen:
-//     // LockScreenPage(),
-//     enabled: appLock,
-//     backgroundLockLatency: const Duration(seconds: 30),
-//   ));
-// }
-
-class LockScreenPage extends StatefulWidget {
+class LockCheck extends StatefulWidget {
   @override
-  _LockScreenPageState createState() => _LockScreenPageState();
+  _LockCheckState createState() => _LockCheckState();
 }
 
-class _LockScreenPageState extends State<LockScreenPage> {
-  @override
-  Widget build(BuildContext context) {
-    return Lockcheck();
-  }
+class _LockCheckState extends State<LockCheck> {
+  bool islockedtemp = true;
 
-  Widget Lockcheck() {
+  lockScreenfn(BuildContext context) {
     if (appLock == true) {
       showLockScreen(
         context: context,
         correctString: applockpass,
-        showBiometricFirst: true,
-        canCancel: false,
         canBiometric: true,
-        biometricButton: Icon(Icons.face),
-        biometricAuthenticate: (context) async {
+        showBiometricFirst: true,
+        biometricAuthenticate: (_) async {
           final localAuth = LocalAuthentication();
           final didAuthenticate = await localAuth.authenticateWithBiometrics(
               localizedReason: 'Please authenticate');
@@ -58,7 +42,26 @@ class _LockScreenPageState extends State<LockScreenPage> {
           );
         },
       );
-    } else {}
+    } else {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => Home()),
+      );
+    }
+  }
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    WidgetsBinding.instance.addPostFrameCallback((_) => lockScreenfn(context));
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+        // body: RaisedButton(onPressed: () => lockScreenfn(context)),
+        );
   }
 }
 
@@ -82,7 +85,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData.dark(),
-      home: Home(),
+      home: LockCheck(),
     );
   }
 }
@@ -97,6 +100,6 @@ class IsLocked {
 
 List<IsLocked> isLockedlist = [];
 
-bool appLock = true;
+bool appLock = false;
 
 String applockpass = "1234";
