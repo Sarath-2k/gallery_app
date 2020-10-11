@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gallery_app/lock.dart';
+import 'package:gallery_app/lockscreen.dart';
 import 'package:photo_gallery/photo_gallery.dart';
 
 import 'home.dart';
@@ -30,7 +31,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData.dark(),
-      home: Home(),
+      home: StartingScreen(),
     );
   }
 }
@@ -44,3 +45,15 @@ class IsLocked {
 }
 
 List<IsLocked> isLockedlist = [];
+
+bool appLock = false;
+
+StartingScreen() {
+  if (appLock == true) {
+    return LockScreen();
+  } else {
+    return Home();
+  }
+}
+
+String applockpass = "1234";

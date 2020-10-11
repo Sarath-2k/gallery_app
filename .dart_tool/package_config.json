@@ -116,6 +116,12 @@
       "languageVersion": "2.10"
     },
     {
+      "name": "passcode_screen",
+      "rootUri": "file:///C:/Users/sarat/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/passcode_screen-1.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.2"
+    },
+    {
       "name": "path",
       "rootUri": "file:///C:/Users/sarat/Documents/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/path-1.8.0-nullsafety.1",
       "packageUri": "lib/",
@@ -284,7 +290,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2020-10-10T22:01:10.709492Z",
+  "generated": "2020-10-11T09:24:55.081613Z",
   "generator": "pub",
   "generatorVersion": "2.10.0"
 }
