@@ -32,8 +32,6 @@ class ViewerPage extends StatelessWidget {
               Uint8List imagebytes = await file.readAsBytes().then((value) {
                 Share.file('image', 'image.jpg', value, 'image/jpg',
                     text: 'My optional text.');
-
-                print("RECIEVEDEDEDEDEDED");
               });
             },
           )

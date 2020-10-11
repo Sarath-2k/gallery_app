@@ -1,12 +1,14 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:gallery_app/lockscreen.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:photo_gallery/photo_gallery.dart';
 import 'package:transparent_image/transparent_image.dart';
 
 import 'albumpage.dart';
 import 'lock.dart';
+import 'main.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -53,7 +55,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-            icon: Icon(Icons.ac_unit_outlined),
+            icon: Icon(Icons.lock),
             onPressed: () {
               Navigator.push(
                 context,
@@ -80,9 +82,22 @@ class _HomeState extends State<Home> {
                     children: <Widget>[
                       ...?_albums?.map(
                         (album) => GestureDetector(
-                          onTap: () => Navigator.of(context).push(
-                              MaterialPageRoute(
-                                  builder: (context) => AlbumPage(album))),
+                          onTap: () {
+                            for (int i = 0; i < isLockedlist.length;) {
+                              if (isLockedlist[i].key == album.name) {
+                                if (isLockedlist[i].locked == true) {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => LockScreen()),
+                                  );
+                                } else {
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                      builder: (context) => AlbumPage(album)));
+                                }
+                              }
+                            }
+                          },
                           child: Column(
                             children: <Widget>[
                               ClipRRect(
