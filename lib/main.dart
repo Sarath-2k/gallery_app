@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:gallery_app/lock.dart';
+import 'package:flutter_app_lock/flutter_app_lock.dart';
+import 'package:flutter_screen_lock/lock_screen.dart';
 import 'package:gallery_app/lockscreen.dart';
+import 'package:gallery_app/start.dart';
+import 'package:local_auth/local_auth.dart';
 import 'package:photo_gallery/photo_gallery.dart';
 
 import 'home.dart';
@@ -8,6 +11,16 @@ import 'home.dart';
 void main() {
   runApp(MyApp());
 }
+
+// void main() {
+//   runApp(AppLock(
+//     builder: (args) => MyApp(
+//     ),
+//     lockScreen: Lock,
+//     enabled: appLock,
+//     backgroundLockLatency: const Duration(seconds: 30),
+//   ));
+// }
 
 class MyApp extends StatefulWidget {
   @override
@@ -17,22 +30,44 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   void initState() {
-    // TODO: implement initState
     PhotoGallery.listAlbums(mediumType: MediumType.image).then((value) {
       value.forEach((element) {
         isLockedlist.add(IsLocked(key: element.name, locked: false));
       });
     });
-
     super.initState();
   }
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData.dark(),
-      home: StartingScreen(),
+      home: Home(),
     );
+  }
+  buildShowLockScreen(BuildContext context) async {
+    showLockScreen(
+          context: context,
+          correctString: applockpass,
+          showBiometricFirst: true,
+          canCancel: false,
+          canBiometric: true,
+          biometricButton: Icon(Icons.face),
+          biometricAuthenticate: (context) async {
+            final localAuth = LocalAuthentication();
+            final didAuthenticate =
+                await localAuth.authenticateWithBiometrics(
+                    localizedReason: 'Please authenticate');
+
+            if (didAuthenticate) {
+              return true;
+            }
+
+            return false;
+          },
+          onUnlocked: () {
+            print('Unlocked.');
+          },
+        );
   }
 }
 
@@ -46,7 +81,7 @@ class IsLocked {
 
 List<IsLocked> isLockedlist = [];
 
-bool appLock = false;
+bool appLock = true;
 
 StartingScreen() {
   if (appLock == true) {

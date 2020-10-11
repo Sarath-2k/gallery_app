@@ -1,111 +1,134 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
-import 'package:gallery_app/home.dart';
-import 'package:gallery_app/main.dart';
-import 'package:passcode_screen/circle.dart';
-import 'package:passcode_screen/keyboard.dart';
-import 'package:passcode_screen/passcode_screen.dart';
+import 'package:flutter_screen_lock/circle_input_button.dart';
+import 'package:flutter_screen_lock/lock_screen.dart';
+import 'package:local_auth/local_auth.dart';
 
-class LockScreen extends StatefulWidget {
+class MyHomePage extends StatefulWidget {
+  MyHomePage({Key key, this.title}) : super(key: key);
+  final String title;
+
   @override
-  _LockScreenState createState() => _LockScreenState();
+  _MyHomePageState createState() => _MyHomePageState();
 }
 
-class _LockScreenState extends State<LockScreen> {
-  final StreamController<bool> verificationNotifier =
-      StreamController<bool>.broadcast();
-  bool isAuthenticated = false;
-
+class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Type code"),
-      ),
-      body: showLockScreen(
-        context,
-        opaque: false,
-        cancelButton: Text(
-          'Cancel',
-          style: const TextStyle(fontSize: 16, color: Colors.white),
-          semanticsLabel: 'Cancel',
-        ),
-      ),
-    );
-  }
-
-  defaultLockScreenButton(BuildContext context) => MaterialButton(
-        color: Theme.of(context).primaryColor,
-        child: Text('Open Default Lock Screen'),
-        onPressed: () {
-          showLockScreen(
-            context,
-            opaque: false,
-            cancelButton: Text(
-              'Cancel',
-              style: const TextStyle(fontSize: 16, color: Colors.white),
-              semanticsLabel: 'Cancel',
-            ),
-          );
-        },
-      );
-
-  showLockScreen(BuildContext context,
-      {bool opaque,
-      CircleUIConfig circleUIConfig,
-      KeyboardUIConfig keyboardUIConfig,
-      Widget cancelButton,
-      List<String> digits}) {
-    Navigator.push(
-        context,
-        PageRouteBuilder(
-          opaque: opaque,
-          pageBuilder: (context, animation, secondaryAnimation) =>
-              PasscodeScreen(
-            title: Text(
-              'Enter App Passcode',
-              textAlign: TextAlign.center,
-              style: TextStyle(color: Colors.white, fontSize: 28),
-            ),
-            circleUIConfig: circleUIConfig,
-            keyboardUIConfig: keyboardUIConfig,
-            passwordEnteredCallback: onPasscodeEntered,
-            cancelButton: cancelButton,
-            deleteButton: Text(
-              'Delete',
-              style: const TextStyle(fontSize: 16, color: Colors.white),
-              semanticsLabel: 'Delete',
-            ),
-            shouldTriggerVerification: verificationNotifier.stream,
-            backgroundColor: Colors.black.withOpacity(0.8),
-            cancelCallback: onPasscodeCancelled,
-            digits: digits,
+        body: SafeArea(
+            child: Center(
+                child: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        RaisedButton(
+          child: Text('Open Lock Screen'),
+          onPressed: () => showLockScreen(
+            context: context,
+            correctString: '1234',
+            onCompleted: (context, result) {
+              Navigator.of(context).maybePop();
+            },
+            onUnlocked: () => print('Unlocked.'),
           ),
-        ));
-  }
+        ),
+        RaisedButton(
+          child: Text('Use local_auth'),
+          onPressed: () => showLockScreen(
+            context: context,
+            correctString: '1234',
+            canBiometric: true,
+            biometricButton: Icon(Icons.face),
+            biometricAuthenticate: (context) async {
+              final localAuth = LocalAuthentication();
+              final didAuthenticate =
+                  await localAuth.authenticateWithBiometrics(
+                      localizedReason: 'Please authenticate');
 
-  onPasscodeEntered(String enteredPasscode) {
-    bool isValid = applockpass == enteredPasscode;
-    verificationNotifier.add(isValid);
-    if (isValid) {
-      setState(() {
-        this.isAuthenticated = isValid;
-      });
-    }
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => Home()),
-    );
-  }
+              if (didAuthenticate) {
+                return true;
+              }
 
-  onPasscodeCancelled() {
-    Navigator.maybePop(context);
-  }
+              return false;
+            },
+            onUnlocked: () {
+              print('Unlocked.');
+            },
+          ),
+        ),
+        RaisedButton(
+          child: Text('Open biometric first'),
+          onPressed: () => showLockScreen(
+            context: context,
+            correctString: '1234',
+            canBiometric: true,
+            showBiometricFirst: true,
+            biometricAuthenticate: (_) async {
+              final localAuth = LocalAuthentication();
+              final didAuthenticate =
+                  await localAuth.authenticateWithBiometrics(
+                      localizedReason: 'Please authenticate');
 
-  @override
-  void dispose() {
-    verificationNotifier.close();
-    super.dispose();
+              if (didAuthenticate) {
+                return true;
+              }
+
+              return false;
+            },
+            onUnlocked: () => print('Unlocked.'),
+          ),
+        ),
+        RaisedButton(
+          child: Text('Can\'t cancel'),
+          onPressed: () => showLockScreen(
+            context: context,
+            correctString: '1234',
+            canCancel: false,
+          ),
+        ),
+        RaisedButton(
+          child: Text('Customize text'),
+          onPressed: () => showLockScreen(
+            context: context,
+            correctString: '1234',
+            cancelText: 'Close',
+            deleteText: 'Remove',
+          ),
+        ),
+        RaisedButton(
+          child: Text('Confirm mode.'),
+          onPressed: () => showConfirmPasscode(
+            context: context,
+            onCompleted: (context, verifyCode) {
+              print(verifyCode);
+              Navigator.of(context).maybePop();
+            },
+          ),
+        ),
+        RaisedButton(
+          child: Text('Change styles.'),
+          onPressed: () => showLockScreen(
+            context: context,
+            correctString: '1234',
+            backgroundColor: Colors.grey.shade50,
+            backgroundColorOpacity: 1,
+            circleInputButtonConfig: CircleInputButtonConfig(
+              textStyle: TextStyle(
+                fontSize: MediaQuery.of(context).size.width * 0.1,
+                color: Colors.white,
+              ),
+              backgroundColor: Colors.blue,
+              backgroundOpacity: 0.5,
+              shape: RoundedRectangleBorder(
+                side: BorderSide(
+                  width: 1,
+                  color: Colors.blue,
+                  style: BorderStyle.solid,
+                ),
+              ),
+            ),
+          ),
+        ),
+      ],
+    ))));
   }
 }

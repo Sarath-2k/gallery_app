@@ -1,7 +1,8 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:gallery_app/lockscreen.dart';
+import 'package:flutter_screen_lock/lock_screen.dart';
+import 'package:local_auth/local_auth.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:photo_gallery/photo_gallery.dart';
 import 'package:transparent_image/transparent_image.dart';
@@ -21,6 +22,7 @@ class _HomeState extends State<Home> {
 
   @override
   void initState() {
+    _lockcheck;
     super.initState();
     _loading = true;
     initAsync();
@@ -152,5 +154,33 @@ class _HomeState extends State<Home> {
               },
             ),
     );
+  }
+  _lockcheck(){
+
+    if(appLock==true){
+      showLockScreen(
+            context: context,
+            correctString: applockpass,
+            showBiometricFirst: true,
+            canCancel: false,
+            canBiometric: true,
+            biometricButton: Icon(Icons.face),
+            biometricAuthenticate: (context) async {
+              final localAuth = LocalAuthentication();
+              final didAuthenticate =
+                  await localAuth.authenticateWithBiometrics(
+                      localizedReason: 'Please authenticate');
+
+              if (didAuthenticate) {
+                return true;
+              }
+
+              return false;
+            },
+            onUnlocked: () {
+              print('Unlocked.');
+            },
+          );
+    }else{}
   }
 }
