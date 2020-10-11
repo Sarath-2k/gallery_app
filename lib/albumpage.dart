@@ -33,9 +33,11 @@ class AlbumPageState extends State<AlbumPage> {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          icon: Icon(Icons.arrow_back_ios),
-          onPressed: () => Navigator.of(context).pop(),
-        ),
+            icon: Icon(Icons.arrow_back_ios),
+            onPressed: () {
+              Navigator.pop(context);
+              Navigator.pop(context);
+            }),
         title: Text(widget.album.name),
       ),
       body: GridView.count(

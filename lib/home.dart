@@ -84,7 +84,7 @@ class _HomeState extends State<Home> {
                       ...?_albums?.map(
                         (album) => GestureDetector(
                           onTap: () {
-                            for (int i = 0; i < isLockedlist.length;) {
+                            for (int i = 0; i < isLockedlist.length; i++) {
                               if (isLockedlist[i].key == album.name) {
                                 if (isLockedlist[i].locked == true) {
                                   showLockScreen(
