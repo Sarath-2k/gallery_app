@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screen_lock/lock_screen.dart';
-import 'package:gallery_app/lockscreen.dart';
 import 'package:gallery_app/main.dart';
 import 'package:local_auth/local_auth.dart';
 import 'package:photo_gallery/photo_gallery.dart';
@@ -41,17 +40,17 @@ class _LockState extends State<Lock> {
           ListTile(
             title: Text("Set LockPassword"),
             subtitle: Text("By default it is 1234"),
-            onTap: (){
+            onTap: () {
               showConfirmPasscode(
-            context: context,
-            onCompleted: (context, verifyCode) {
-              applockpass=verifyCode;
-              print(verifyCode);
-              Navigator.of(context).maybePop();
+                context: context,
+                onCompleted: (context, verifyCode) {
+                  applockpass = verifyCode;
+                  print(verifyCode);
+                  Navigator.of(context).maybePop();
+                },
+              );
             },
-          );
-            },
-        ),
+          ),
           ListTile(
             title: Text("Lock the application"),
             trailing: Switch(
@@ -62,8 +61,7 @@ class _LockState extends State<Lock> {
                 });
                 if (newappstate == true) {
                   buildShowLockScreen(context);
-    }
-                 else {
+                } else {
                   print("AppUnlocked");
                 }
               },
@@ -93,28 +91,27 @@ class _LockState extends State<Lock> {
 
   buildShowLockScreen(BuildContext context) async {
     showLockScreen(
-          context: context,
-          correctString: applockpass,
-          showBiometricFirst: true,
-          canCancel: false,
-          canBiometric: true,
-          biometricButton: Icon(Icons.face),
-          biometricAuthenticate: (context) async {
-            final localAuth = LocalAuthentication();
-            final didAuthenticate =
-                await localAuth.authenticateWithBiometrics(
-                    localizedReason: 'Please authenticate');
+      context: context,
+      correctString: applockpass,
+      showBiometricFirst: true,
+      canCancel: false,
+      canBiometric: true,
+      biometricButton: Icon(Icons.face),
+      biometricAuthenticate: (context) async {
+        final localAuth = LocalAuthentication();
+        final didAuthenticate = await localAuth.authenticateWithBiometrics(
+            localizedReason: 'Please authenticate');
 
-            if (didAuthenticate) {
-              return true;
-            }
+        if (didAuthenticate) {
+          return true;
+        }
 
-            return false;
-          },
-          onUnlocked: () {
-            print('Unlocked.');
-          },
-        );
+        return false;
+      },
+      onUnlocked: () {
+        print('Unlocked.');
+      },
+    );
   }
 }
 

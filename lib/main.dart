@@ -1,26 +1,66 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_lock/flutter_app_lock.dart';
+// import 'package:flutter_app_lock/flutter_app_lock.dart';
 import 'package:flutter_screen_lock/lock_screen.dart';
-import 'package:gallery_app/lockscreen.dart';
-import 'package:gallery_app/start.dart';
 import 'package:local_auth/local_auth.dart';
 import 'package:photo_gallery/photo_gallery.dart';
 
 import 'home.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(LockScreenPage());
 }
 
 // void main() {
 //   runApp(AppLock(
-//     builder: (args) => MyApp(
-//     ),
-//     lockScreen: Lock,
+//     builder: (args) => MyApp(),
+//     lockScreen:
+//     // LockScreenPage(),
 //     enabled: appLock,
 //     backgroundLockLatency: const Duration(seconds: 30),
 //   ));
 // }
+
+class LockScreenPage extends StatefulWidget {
+  @override
+  _LockScreenPageState createState() => _LockScreenPageState();
+}
+
+class _LockScreenPageState extends State<LockScreenPage> {
+  @override
+  Widget build(BuildContext context) {
+    return Lockcheck();
+  }
+
+  Widget Lockcheck() {
+    if (appLock == true) {
+      showLockScreen(
+        context: context,
+        correctString: applockpass,
+        showBiometricFirst: true,
+        canCancel: false,
+        canBiometric: true,
+        biometricButton: Icon(Icons.face),
+        biometricAuthenticate: (context) async {
+          final localAuth = LocalAuthentication();
+          final didAuthenticate = await localAuth.authenticateWithBiometrics(
+              localizedReason: 'Please authenticate');
+
+          if (didAuthenticate) {
+            return true;
+          }
+
+          return false;
+        },
+        onUnlocked: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => Home()),
+          );
+        },
+      );
+    } else {}
+  }
+}
 
 class MyApp extends StatefulWidget {
   @override
@@ -37,37 +77,13 @@ class _MyAppState extends State<MyApp> {
     });
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData.dark(),
       home: Home(),
     );
-  }
-  buildShowLockScreen(BuildContext context) async {
-    showLockScreen(
-          context: context,
-          correctString: applockpass,
-          showBiometricFirst: true,
-          canCancel: false,
-          canBiometric: true,
-          biometricButton: Icon(Icons.face),
-          biometricAuthenticate: (context) async {
-            final localAuth = LocalAuthentication();
-            final didAuthenticate =
-                await localAuth.authenticateWithBiometrics(
-                    localizedReason: 'Please authenticate');
-
-            if (didAuthenticate) {
-              return true;
-            }
-
-            return false;
-          },
-          onUnlocked: () {
-            print('Unlocked.');
-          },
-        );
   }
 }
 
@@ -82,13 +98,5 @@ class IsLocked {
 List<IsLocked> isLockedlist = [];
 
 bool appLock = true;
-
-StartingScreen() {
-  if (appLock == true) {
-    return LockScreen();
-  } else {
-    return Home();
-  }
-}
 
 String applockpass = "1234";

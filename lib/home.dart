@@ -22,7 +22,6 @@ class _HomeState extends State<Home> {
 
   @override
   void initState() {
-    _lockcheck;
     super.initState();
     _loading = true;
     initAsync();
@@ -88,10 +87,32 @@ class _HomeState extends State<Home> {
                             for (int i = 0; i < isLockedlist.length;) {
                               if (isLockedlist[i].key == album.name) {
                                 if (isLockedlist[i].locked == true) {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => LockScreen()),
+                                  showLockScreen(
+                                    context: context,
+                                    correctString: '1234',
+                                    canBiometric: true,
+                                    showBiometricFirst: true,
+                                    biometricAuthenticate: (_) async {
+                                      final localAuth = LocalAuthentication();
+                                      final didAuthenticate = await localAuth
+                                          .authenticateWithBiometrics(
+                                              localizedReason:
+                                                  'Please authenticate');
+
+                                      if (didAuthenticate) {
+                                        return true;
+                                      }
+
+                                      return false;
+                                    },
+                                    onUnlocked: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                AlbumPage(album)),
+                                      );
+                                    },
                                   );
                                 } else {
                                   Navigator.of(context).push(MaterialPageRoute(
@@ -155,32 +176,31 @@ class _HomeState extends State<Home> {
             ),
     );
   }
-  _lockcheck(){
 
-    if(appLock==true){
+  lockcheck() {
+    if (appLock == true) {
       showLockScreen(
-            context: context,
-            correctString: applockpass,
-            showBiometricFirst: true,
-            canCancel: false,
-            canBiometric: true,
-            biometricButton: Icon(Icons.face),
-            biometricAuthenticate: (context) async {
-              final localAuth = LocalAuthentication();
-              final didAuthenticate =
-                  await localAuth.authenticateWithBiometrics(
-                      localizedReason: 'Please authenticate');
+        context: context,
+        correctString: applockpass,
+        showBiometricFirst: true,
+        canCancel: false,
+        canBiometric: true,
+        biometricButton: Icon(Icons.face),
+        biometricAuthenticate: (context) async {
+          final localAuth = LocalAuthentication();
+          final didAuthenticate = await localAuth.authenticateWithBiometrics(
+              localizedReason: 'Please authenticate');
 
-              if (didAuthenticate) {
-                return true;
-              }
+          if (didAuthenticate) {
+            return true;
+          }
 
-              return false;
-            },
-            onUnlocked: () {
-              print('Unlocked.');
-            },
-          );
-    }else{}
+          return false;
+        },
+        onUnlocked: () {
+          print('Unlocked.');
+        },
+      );
+    } else {}
   }
 }

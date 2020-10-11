@@ -35,7 +35,7 @@ dependencies:
   
 
   flutter_screen_lock: ^1.2.4
-  flutter_app_lock: ^1.4.0+1
+  # flutter_app_lock: ^1.4.0+1
   local_auth: ^0.6.3+2
 
 
