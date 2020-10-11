@@ -3,6 +3,7 @@ import 'package:flutter_screen_lock/lock_screen.dart';
 import 'package:gallery_app/main.dart';
 import 'package:local_auth/local_auth.dart';
 import 'package:photo_gallery/photo_gallery.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class Lock extends StatefulWidget {
   @override
@@ -43,8 +44,12 @@ class _LockState extends State<Lock> {
             onTap: () {
               showConfirmPasscode(
                 context: context,
-                onCompleted: (context, verifyCode) {
+                onCompleted: (context, verifyCode) async {
                   applockpass = verifyCode;
+                  final prefs = await SharedPreferences.getInstance();
+                  final key = "Password";
+                  final value = applockpass;
+                  prefs.setString(key, value);
                   print(verifyCode);
                   Navigator.of(context).maybePop();
                 },
@@ -56,8 +61,13 @@ class _LockState extends State<Lock> {
             trailing: Switch(
               value: appLock,
               onChanged: (bool newappstate) {
-                setState(() {
+                setState(() async {
                   appLock = newappstate;
+
+                  final prefs = await SharedPreferences.getInstance();
+                  final key = 'lockState';
+                  final value = newappstate;
+                  prefs.setBool(key, value);
                 });
                 if (newappstate == true) {
                   buildShowLockScreen(context);

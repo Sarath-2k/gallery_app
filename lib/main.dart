@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screen_lock/lock_screen.dart';
 import 'package:local_auth/local_auth.dart';
 import 'package:photo_gallery/photo_gallery.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import 'home.dart';
 
@@ -73,11 +74,23 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   void initState() {
+    SharedPreferences.getInstance().then((SharedPreferences sp) {
+      sharedPreferences = sp;
+      final lockState = 'lockState';
+      var value1 = sharedPreferences.getBool(lockState) ?? false;
+      appLock = value1;
+      final password = 'Password';
+      var pass = sharedPreferences.getString(password);
+      applockpass = pass;
+      setState(() {});
+    });
+
     PhotoGallery.listAlbums(mediumType: MediumType.image).then((value) {
       value.forEach((element) {
         isLockedlist.add(IsLocked(key: element.name, locked: false));
       });
     });
+
     super.initState();
   }
 
@@ -103,3 +116,4 @@ List<IsLocked> isLockedlist = [];
 bool appLock = false;
 
 String applockpass = "1234";
+SharedPreferences sharedPreferences;
