@@ -1,19 +1,19 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\sarat\Documents\Flutter\flutter\.pub-cache\hosted\pub.dartlang.org\photo_gallery-0.3.0\android\src\main\AndroidManifest.xml:1:1-56
-INJECTED from C:\Users\sarat\Documents\Flutter\flutter\.pub-cache\hosted\pub.dartlang.org\photo_gallery-0.3.0\android\src\main\AndroidManifest.xml:1:1-56
-INJECTED from C:\Users\sarat\Documents\Flutter\flutter\.pub-cache\hosted\pub.dartlang.org\photo_gallery-0.3.0\android\src\main\AndroidManifest.xml:1:1-56
+ADDED from C:\Users\sarat\Documents\flutter\.pub-cache\hosted\pub.dartlang.org\photo_gallery-0.3.0\android\src\main\AndroidManifest.xml:1:1-56
+INJECTED from C:\Users\sarat\Documents\flutter\.pub-cache\hosted\pub.dartlang.org\photo_gallery-0.3.0\android\src\main\AndroidManifest.xml:1:1-56
+INJECTED from C:\Users\sarat\Documents\flutter\.pub-cache\hosted\pub.dartlang.org\photo_gallery-0.3.0\android\src\main\AndroidManifest.xml:1:1-56
 	package
-		ADDED from C:\Users\sarat\Documents\Flutter\flutter\.pub-cache\hosted\pub.dartlang.org\photo_gallery-0.3.0\android\src\main\AndroidManifest.xml:1:11-44
-		INJECTED from C:\Users\sarat\Documents\Flutter\flutter\.pub-cache\hosted\pub.dartlang.org\photo_gallery-0.3.0\android\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\sarat\Documents\Flutter\flutter\.pub-cache\hosted\pub.dartlang.org\photo_gallery-0.3.0\android\src\main\AndroidManifest.xml
+		ADDED from C:\Users\sarat\Documents\flutter\.pub-cache\hosted\pub.dartlang.org\photo_gallery-0.3.0\android\src\main\AndroidManifest.xml:1:11-44
+		INJECTED from C:\Users\sarat\Documents\flutter\.pub-cache\hosted\pub.dartlang.org\photo_gallery-0.3.0\android\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\sarat\Documents\flutter\.pub-cache\hosted\pub.dartlang.org\photo_gallery-0.3.0\android\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\sarat\Documents\Flutter\flutter\.pub-cache\hosted\pub.dartlang.org\photo_gallery-0.3.0\android\src\main\AndroidManifest.xml:1:1-56
+		ADDED from C:\Users\sarat\Documents\flutter\.pub-cache\hosted\pub.dartlang.org\photo_gallery-0.3.0\android\src\main\AndroidManifest.xml:1:1-56
 uses-sdk
-INJECTED from C:\Users\sarat\Documents\Flutter\flutter\.pub-cache\hosted\pub.dartlang.org\photo_gallery-0.3.0\android\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\sarat\Documents\Flutter\flutter\.pub-cache\hosted\pub.dartlang.org\photo_gallery-0.3.0\android\src\main\AndroidManifest.xml
-INJECTED from C:\Users\sarat\Documents\Flutter\flutter\.pub-cache\hosted\pub.dartlang.org\photo_gallery-0.3.0\android\src\main\AndroidManifest.xml
+INJECTED from C:\Users\sarat\Documents\flutter\.pub-cache\hosted\pub.dartlang.org\photo_gallery-0.3.0\android\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\sarat\Documents\flutter\.pub-cache\hosted\pub.dartlang.org\photo_gallery-0.3.0\android\src\main\AndroidManifest.xml
+INJECTED from C:\Users\sarat\Documents\flutter\.pub-cache\hosted\pub.dartlang.org\photo_gallery-0.3.0\android\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\sarat\Documents\Flutter\flutter\.pub-cache\hosted\pub.dartlang.org\photo_gallery-0.3.0\android\src\main\AndroidManifest.xml
-		ADDED from C:\Users\sarat\Documents\Flutter\flutter\.pub-cache\hosted\pub.dartlang.org\photo_gallery-0.3.0\android\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\sarat\Documents\Flutter\flutter\.pub-cache\hosted\pub.dartlang.org\photo_gallery-0.3.0\android\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\sarat\Documents\flutter\.pub-cache\hosted\pub.dartlang.org\photo_gallery-0.3.0\android\src\main\AndroidManifest.xml
+		ADDED from C:\Users\sarat\Documents\flutter\.pub-cache\hosted\pub.dartlang.org\photo_gallery-0.3.0\android\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\sarat\Documents\flutter\.pub-cache\hosted\pub.dartlang.org\photo_gallery-0.3.0\android\src\main\AndroidManifest.xml

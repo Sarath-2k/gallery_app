@@ -36,65 +36,69 @@ class _LockState extends State<Lock> {
           },
         ),
       ),
-      body: Column(
-        children: [
-          ListTile(
-            title: Text("Set LockPassword"),
-            subtitle: Text("By default it is 1234"),
-            onTap: () {
-              showConfirmPasscode(
-                context: context,
-                onCompleted: (context, verifyCode) async {
-                  applockpass = verifyCode;
-                  final prefs = await SharedPreferences.getInstance();
-                  final key = "Password";
-                  final value = applockpass;
-                  prefs.setString(key, value);
-                  print(verifyCode);
-                  Navigator.of(context).maybePop();
-                },
-              );
-            },
-          ),
-          ListTile(
-            title: Text("Lock the application"),
-            trailing: Switch(
-              value: appLock,
-              onChanged: (bool newappstate) {
-                setState(() async {
-                  appLock = newappstate;
-
-                  final prefs = await SharedPreferences.getInstance();
-                  final key = 'lockState';
-                  final value = newappstate;
-                  prefs.setBool(key, value);
-                });
-                if (newappstate == true) {
-                  buildShowLockScreen(context);
-                } else {
-                  print("AppUnlocked");
-                }
+      body: SingleChildScrollView(
+              child: Column(
+          children: [
+            ListTile(
+              title: Text("Set LockPassword"),
+              subtitle: Text("By default it is 1234"),
+              onTap: () {
+                showConfirmPasscode(
+                  context: context,
+                  onCompleted: (context, verifyCode) async {
+                    applockpass = verifyCode;
+                    final prefs = await SharedPreferences.getInstance();
+                    final key = "Password";
+                    final value = applockpass;
+                    prefs.setString(key, value);
+                    print(verifyCode);
+                    Navigator.of(context).maybePop();
+                  },
+                );
               },
             ),
-          ),
-          Divider(
-            thickness: 1,
-          ),
-          ListView.builder(
-              shrinkWrap: true,
-              itemCount: isLockedlist.length,
-              itemBuilder: (context, index) {
-                return ListTile(
-                    title: Text(isLockedlist[index].key),
-                    trailing: Switch(
-                        value: isLockedlist[index].locked,
-                        onChanged: (bool newvalue) {
-                          setState(() {
-                            isLockedlist[index].locked = newvalue;
-                          });
-                        }));
-              }),
-        ],
+            ListTile(
+              title: Text("Lock the application"),
+              trailing: Switch(
+                value: appLock,
+                onChanged: (bool newappstate) {
+                  setState(() async {
+                    appLock = newappstate;
+
+                    final prefs = await SharedPreferences.getInstance();
+                    final key = 'lockState';
+                    final value = newappstate;
+                    prefs.setBool(key, value);
+                  });
+                  if (newappstate == true) {
+                    buildShowLockScreen(context);
+                  } else {
+                    print("AppUnlocked");
+                  }
+                },
+              ),
+            ),
+            Divider(
+              thickness: 1,
+            ),
+            ListView.builder(
+                physics: ScrollPhysics(),
+                scrollDirection: Axis.vertical,                            
+                shrinkWrap: true,
+                itemCount: isLockedlist.length,
+                itemBuilder: (context, index) {
+                  return ListTile(
+                      title: Text(isLockedlist[index].key),
+                      trailing: Switch(
+                          value: isLockedlist[index].locked,
+                          onChanged: (bool newvalue) {
+                            setState(() {
+                              isLockedlist[index].locked = newvalue;
+                            });
+                          }));
+                }),
+          ],
+        ),
       ),
     );
   }
