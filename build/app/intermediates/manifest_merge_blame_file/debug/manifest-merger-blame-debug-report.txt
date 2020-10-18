@@ -34,8 +34,8 @@
 25-->[androidx.biometric:biometric:1.0.0-beta01] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\5403527ba017da42dd2413a70b830107\biometric-1.0.0-beta01\AndroidManifest.xml:25:5-74
 25-->[androidx.biometric:biometric:1.0.0-beta01] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\5403527ba017da42dd2413a70b830107\biometric-1.0.0-beta01\AndroidManifest.xml:25:22-71
 26    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-26-->[com.google.android.exoplayer:exoplayer-core:2.9.6] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\3afdfcc7cc5549b06622742717e69bc9\jetified-exoplayer-core-2.9.6\AndroidManifest.xml:24:5-79
-26-->[com.google.android.exoplayer:exoplayer-core:2.9.6] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\3afdfcc7cc5549b06622742717e69bc9\jetified-exoplayer-core-2.9.6\AndroidManifest.xml:24:22-76
+26-->[com.google.android.exoplayer:exoplayer-core:2.9.6] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\e9aa22b8569cdf249df03848394fb6d2\jetified-exoplayer-core-2.9.6\AndroidManifest.xml:24:5-79
+26-->[com.google.android.exoplayer:exoplayer-core:2.9.6] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\e9aa22b8569cdf249df03848394fb6d2\jetified-exoplayer-core-2.9.6\AndroidManifest.xml:24:22-76
 27
 28    <application
 28-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:10:5-49:19

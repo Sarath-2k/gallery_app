@@ -32,6 +32,7 @@ dependencies:
   flutter_share: ^1.0.2+1
   documents_picker: ^1.0.0
   esys_flutter_share: ^1.0.2
+  swipedetector: ^1.2.0
   
   shared_preferences: ^0.5.12
   

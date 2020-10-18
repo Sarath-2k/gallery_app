@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gallery_app/viewer.dart';
 import 'package:photo_gallery/photo_gallery.dart';
 import 'package:transparent_image/transparent_image.dart';
+import 'package:gallery_app/main.dart';
 
 class AlbumPage extends StatefulWidget {
   final Album album;
@@ -14,7 +15,6 @@ class AlbumPage extends StatefulWidget {
 
 class AlbumPageState extends State<AlbumPage> {
   List<Medium> _media;
-
   @override
   void initState() {
     super.initState();
@@ -25,6 +25,7 @@ class AlbumPageState extends State<AlbumPage> {
     MediaPage mediaPage = await widget.album.listMedia();
     setState(() {
       _media = mediaPage.items;
+      imagemedium = mediaPage.items;
     });
   }
 
@@ -47,8 +48,11 @@ class AlbumPageState extends State<AlbumPage> {
         children: <Widget>[
           ...?_media?.map(
             (medium) => GestureDetector(
-              onTap: () => Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => ViewerPage(medium))),
+              onTap: () {
+                print(medium);
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => ViewerPage(medium)));
+              },
               child: Container(
                 color: Colors.grey[300],
                 child: FadeInImage(

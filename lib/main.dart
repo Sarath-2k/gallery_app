@@ -20,6 +20,7 @@ class _LockCheckState extends State<LockCheck> {
 
   lockScreenfn(BuildContext context) {
     if (appLock == true) {
+      print(applockpass);
       showLockScreen(
         context: context,
         correctString: applockpass,
@@ -77,14 +78,29 @@ class _MyAppState extends State<MyApp> {
     SharedPreferences.getInstance().then((SharedPreferences sp) {
       sharedPreferences = sp;
       final lockState = 'lockState';
-      var value1 = sharedPreferences.getBool(lockState) ?? false;
-      appLock = value1;
+      var value1 = sharedPreferences.getBool(lockState);
+      if (value1 == true) {
+        appLock = value1;
+      } else {
+        appLock = false;
+      }
       final password = 'Password';
       var pass = sharedPreferences.getString(password);
-      applockpass = pass;
+      if (pass != null) {
+        applockpass = pass;
+      } else {
+        applockpass = "1234";
+      }
+      final listkey = "lockedlist";
+      var list = sharedPreferences.getStringList(listkey);
+      templockedlist = list;
+      if (templockedlist.length != lockedlist.length) {
+        lockedlist = templockedlist;
+      }
       setState(() {});
     });
 
+    lock();
     PhotoGallery.listAlbums(mediumType: MediumType.image).then((value) {
       value.forEach((element) {
         isLockedlist.add(IsLocked(key: element.name, locked: false));
@@ -113,7 +129,21 @@ class IsLocked {
 
 List<IsLocked> isLockedlist = [];
 
-bool appLock = false;
+bool appLock;
 
 String applockpass = "1234";
 SharedPreferences sharedPreferences;
+List<Medium> imagemedium;
+List<String> lockedlist = ['application'];
+List<String> templockedlist = ['application'];
+lock() {
+  if (isLockedlist.length != lockedlist) {
+    for (int i = 0; i < isLockedlist.length; i++) {
+      for (String name in lockedlist) {
+        if (isLockedlist[i].key == name) {
+          isLockedlist[i].locked = true;
+        }
+      }
+    }
+  }
+}

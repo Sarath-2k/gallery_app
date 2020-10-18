@@ -4,18 +4,25 @@ import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
 import 'package:photo_gallery/photo_gallery.dart';
+import 'package:swipedetector/swipedetector.dart';
 import 'package:transparent_image/transparent_image.dart';
 import 'package:video_player/video_player.dart';
 import 'package:esys_flutter_share/esys_flutter_share.dart';
+import 'package:gallery_app/main.dart';
 
-class ViewerPage extends StatelessWidget {
+class ViewerPage extends StatefulWidget {
   final Medium medium;
 
   ViewerPage(Medium medium) : medium = medium;
 
   @override
+  _ViewerPageState createState() => _ViewerPageState();
+}
+
+class _ViewerPageState extends State<ViewerPage> {
+  @override
   Widget build(BuildContext context) {
-    DateTime date = medium.creationDate ?? medium.modifiedDate;
+    DateTime date = widget.medium.creationDate ?? widget.medium.modifiedDate;
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
@@ -27,8 +34,8 @@ class ViewerPage extends StatelessWidget {
           IconButton(
             icon: Icon(Icons.share),
             onPressed: () async {
-              print(medium.getFile());
-              File file = await medium.getFile();
+              print(widget.medium.getFile());
+              File file = await widget.medium.getFile();
               Uint8List imagebytes = await file.readAsBytes().then((value) {
                 Share.file('image', 'image.jpg', value, 'image/jpg',
                     text: 'My optional text.');
@@ -37,17 +44,21 @@ class ViewerPage extends StatelessWidget {
           )
         ],
       ),
-      body: Container(
-        alignment: Alignment.center,
-        child: medium.mediumType == MediumType.image
-            ? FadeInImage(
-                fit: BoxFit.cover,
-                placeholder: MemoryImage(kTransparentImage),
-                image: PhotoProvider(mediumId: medium.id),
-              )
-            : VideoProvider(
-                mediumId: medium.id,
-              ),
+      body: SwipeDetector(
+        onSwipeLeft: () {},
+        onSwipeRight: () {},
+        child: Container(
+          alignment: Alignment.center,
+          child: widget.medium.mediumType == MediumType.image
+              ? FadeInImage(
+                  fit: BoxFit.cover,
+                  placeholder: MemoryImage(kTransparentImage),
+                  image: PhotoProvider(mediumId: widget.medium.id),
+                )
+              : VideoProvider(
+                  mediumId: widget.medium.id,
+                ),
+        ),
       ),
     );
   }

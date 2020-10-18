@@ -89,7 +89,7 @@ class _HomeState extends State<Home> {
                                 if (isLockedlist[i].locked == true) {
                                   showLockScreen(
                                     context: context,
-                                    correctString: '1234',
+                                    correctString: applockpass,
                                     canBiometric: true,
                                     showBiometricFirst: true,
                                     biometricAuthenticate: (_) async {

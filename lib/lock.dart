@@ -13,11 +13,13 @@ class Lock extends StatefulWidget {
 List<Album> albumlist;
 
 class _LockState extends State<Lock> {
+  bool appLock1 = false;
   @override
   void initState() {
     PhotoGallery.listAlbums(mediumType: MediumType.image).then((value) {
       setState(() {
         albumlist = value;
+        appLock1 = appLock;
       });
     });
 
@@ -37,7 +39,7 @@ class _LockState extends State<Lock> {
         ),
       ),
       body: SingleChildScrollView(
-              child: Column(
+        child: Column(
           children: [
             ListTile(
               title: Text("Set LockPassword"),
@@ -60,15 +62,15 @@ class _LockState extends State<Lock> {
             ListTile(
               title: Text("Lock the application"),
               trailing: Switch(
-                value: appLock,
-                onChanged: (bool newappstate) {
-                  setState(() async {
+                value: appLock1,
+                onChanged: (bool newappstate) async {
+                  final prefs = await SharedPreferences.getInstance();
+                  final key = 'lockState';
+                  final value = newappstate;
+                  prefs.setBool(key, value);
+                  setState(() {
                     appLock = newappstate;
-
-                    final prefs = await SharedPreferences.getInstance();
-                    final key = 'lockState';
-                    final value = newappstate;
-                    prefs.setBool(key, value);
+                    appLock1 = newappstate;
                   });
                   if (newappstate == true) {
                     buildShowLockScreen(context);
@@ -83,7 +85,7 @@ class _LockState extends State<Lock> {
             ),
             ListView.builder(
                 physics: ScrollPhysics(),
-                scrollDirection: Axis.vertical,                            
+                scrollDirection: Axis.vertical,
                 shrinkWrap: true,
                 itemCount: isLockedlist.length,
                 itemBuilder: (context, index) {
@@ -91,9 +93,26 @@ class _LockState extends State<Lock> {
                       title: Text(isLockedlist[index].key),
                       trailing: Switch(
                           value: isLockedlist[index].locked,
-                          onChanged: (bool newvalue) {
+                          onChanged: (bool newvalue) async {
+                            final prefs = await SharedPreferences.getInstance();
+                            final key = "lockedlist";
+                            final value = isLockedlist[index].key;
+                            final newlist = lockedlist.add(value);
+                            prefs.setStringList(key, lockedlist);
                             setState(() {
                               isLockedlist[index].locked = newvalue;
+                              if (newvalue == true) {
+                                print(isLockedlist[index].key);
+                                lockedlist.add(isLockedlist[index].key);
+                                print(lockedlist);
+                              } else {
+                                isLockedlist[index].locked = newvalue;
+                                if (newvalue == false) {
+                                  lockedlist.remove(isLockedlist[index].key);
+                                  print(lockedlist);
+                                }
+                              }
+                              ;
                             });
                           }));
                 }),
