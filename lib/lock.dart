@@ -28,6 +28,7 @@ class _LockState extends State<Lock> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.black,
         title: Text(""),
         leading: IconButton(
           icon: Icon(Icons.arrow_back),

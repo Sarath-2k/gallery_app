@@ -27,14 +27,15 @@ class AlbumPageState extends State<AlbumPage> {
       _media = mediaPage.items;
       imagemedium = mediaPage.items;
     });
-    while (true) {
-      for (int i = 0; i >= 0; i++) {
-        if (_media[i].id != null) {
-          allphotos[i] = (_media[i].id);
-        } else
-          print("break");
-        break;
+    for (int i = 0; i < _media.length; i++) {
+      if (_media[i].id != null) {
+        print("Keri");
+        allphotos.add(_media[i].id);
       }
+      // else {
+      //   print("break");
+      //   break;
+      // }
     }
   }
 
@@ -42,6 +43,7 @@ class AlbumPageState extends State<AlbumPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.black,
         leading: IconButton(
             icon: Icon(Icons.arrow_back_ios),
             onPressed: () {
@@ -91,3 +93,5 @@ class AlbumPageState extends State<AlbumPage> {
 }
 
 List<String> allphotos = [];
+String albumfirst;
+String albumlast;

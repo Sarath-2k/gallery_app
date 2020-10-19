@@ -55,6 +55,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.black,
         leading: IconButton(
             icon: Icon(Icons.lock),
             onPressed: () {

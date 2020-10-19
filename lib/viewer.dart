@@ -3,6 +3,7 @@ import 'dart:async';
 import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
+import 'package:gallery_app/albumpage.dart';
 import 'package:photo_gallery/photo_gallery.dart';
 import 'package:swipedetector/swipedetector.dart';
 import 'package:transparent_image/transparent_image.dart';
@@ -12,7 +13,6 @@ import 'package:gallery_app/main.dart';
 
 class ViewerPage extends StatefulWidget {
   final Medium medium;
-
   ViewerPage(Medium medium) : medium = medium;
 
   @override
@@ -20,16 +20,29 @@ class ViewerPage extends StatefulWidget {
 }
 
 class _ViewerPageState extends State<ViewerPage> {
+  PhotoProvider pic;
+  @override
+  void initState() {
+    pic = PhotoProvider(mediumId: widget.medium.id);
+    for (int i = 0; i < allphotos.length; i++) {
+      if (widget.medium.id == allphotos[i]) {
+        current = i;
+      }
+    }
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     DateTime date = widget.medium.creationDate ?? widget.medium.modifiedDate;
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.black,
         leading: IconButton(
           onPressed: () => Navigator.of(context).pop(),
           icon: Icon(Icons.arrow_back_ios),
         ),
-        title: Text(date?.toLocal().toString()),
+        // title: Text(date?.toLocal().toString()),
         actions: [
           IconButton(
             icon: Icon(Icons.share),
@@ -45,15 +58,35 @@ class _ViewerPageState extends State<ViewerPage> {
         ],
       ),
       body: SwipeDetector(
-        onSwipeLeft: () {},
-        onSwipeRight: () {},
+        onSwipeLeft: () {
+          setState(() {
+            if (current != allphotos.length - 1) {
+              pic = PhotoProvider(mediumId: allphotos[current + 1]);
+              current = current + 1;
+            } else {
+              pic = PhotoProvider(mediumId: allphotos[0]);
+              current = 0;
+            }
+          });
+        },
+        onSwipeRight: () {
+          setState(() {
+            if (current != 0) {
+              pic = PhotoProvider(mediumId: allphotos[current - 1]);
+              current = current - 1;
+            } else {
+              pic = PhotoProvider(mediumId: allphotos[allphotos.length - 1]);
+              current = allphotos.length - 1;
+            }
+          });
+        },
         child: Container(
           alignment: Alignment.center,
           child: widget.medium.mediumType == MediumType.image
               ? FadeInImage(
                   fit: BoxFit.cover,
                   placeholder: MemoryImage(kTransparentImage),
-                  image: PhotoProvider(mediumId: widget.medium.id),
+                  image: pic,
                 )
               : VideoProvider(
                   mediumId: widget.medium.id,
@@ -127,3 +160,5 @@ class _VideoProviderState extends State<VideoProvider> {
           );
   }
 }
+
+int current;
