@@ -27,6 +27,15 @@ class AlbumPageState extends State<AlbumPage> {
       _media = mediaPage.items;
       imagemedium = mediaPage.items;
     });
+    while (true) {
+      for (int i = 0; i >= 0; i++) {
+        if (_media[i].id != null) {
+          allphotos[i] = (_media[i].id);
+        } else
+          print("break");
+        break;
+      }
+    }
   }
 
   @override
@@ -36,8 +45,16 @@ class AlbumPageState extends State<AlbumPage> {
         leading: IconButton(
             icon: Icon(Icons.arrow_back_ios),
             onPressed: () {
-              Navigator.pop(context);
-              Navigator.pop(context);
+              for (int i = 0; i < isLockedlist.length; i++) {
+                if (isLockedlist[i].key == widget.album.name) {
+                  if (isLockedlist[i].locked == true) {
+                    Navigator.pop(context);
+                    Navigator.pop(context);
+                  } else {
+                    Navigator.pop(context);
+                  }
+                }
+              }
             }),
         title: Text(widget.album.name),
       ),
@@ -72,3 +89,5 @@ class AlbumPageState extends State<AlbumPage> {
     );
   }
 }
+
+List<String> allphotos = [];

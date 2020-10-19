@@ -20,7 +20,6 @@ class _LockCheckState extends State<LockCheck> {
 
   lockScreenfn(BuildContext context) {
     if (appLock == true) {
-      print(applockpass);
       showLockScreen(
         context: context,
         correctString: applockpass,
@@ -54,27 +53,6 @@ class _LockCheckState extends State<LockCheck> {
 
   @override
   void initState() {
-    // TODO: implement initState
-    WidgetsBinding.instance.addPostFrameCallback((_) => lockScreenfn(context));
-    super.initState();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-        // body: RaisedButton(onPressed: () => lockScreenfn(context)),
-        );
-  }
-}
-
-class MyApp extends StatefulWidget {
-  @override
-  _MyAppState createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  @override
-  void initState() {
     SharedPreferences.getInstance().then((SharedPreferences sp) {
       sharedPreferences = sp;
       final lockState = 'lockState';
@@ -96,17 +74,38 @@ class _MyAppState extends State<MyApp> {
       templockedlist = list;
       if (templockedlist.length != lockedlist.length) {
         lockedlist = templockedlist;
-      }
+      } else {}
       setState(() {});
     });
 
-    lock();
+    // lock();
     PhotoGallery.listAlbums(mediumType: MediumType.image).then((value) {
       value.forEach((element) {
         isLockedlist.add(IsLocked(key: element.name, locked: false));
+        // print(element.name);
+        allalbumlist.add(element.name);
       });
+
+      lockScreenfn(context);
     });
 
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
+
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  @override
+  void initState() {
     super.initState();
   }
 
@@ -136,14 +135,20 @@ SharedPreferences sharedPreferences;
 List<Medium> imagemedium;
 List<String> lockedlist = ['application'];
 List<String> templockedlist = ['application'];
-lock() {
-  if (isLockedlist.length != lockedlist) {
-    for (int i = 0; i < isLockedlist.length; i++) {
-      for (String name in lockedlist) {
-        if (isLockedlist[i].key == name) {
-          isLockedlist[i].locked = true;
-        }
-      }
-    }
-  }
-}
+List<String> allalbumlist = [];
+// lock() {
+//   print("THODANGI");
+//   if (isLockedlist.length != lockedlist) {
+//     print("ULLIL KERI0");
+//     for (int i = 0; i < lockedlist.length; i++) {
+//       print("ULLIL KERI1");
+//       for (String name in lockedlist) {
+//         print("ULLIL KERI2");
+//         if (isLockedlist[i].key == name) {
+//           print("ULLIL KERI3");
+//           isLockedlist[i].locked = true;
+//         }
+//       }
+//     }
+//   }
+// }

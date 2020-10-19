@@ -13,13 +13,11 @@ class Lock extends StatefulWidget {
 List<Album> albumlist;
 
 class _LockState extends State<Lock> {
-  bool appLock1 = false;
   @override
   void initState() {
     PhotoGallery.listAlbums(mediumType: MediumType.image).then((value) {
       setState(() {
         albumlist = value;
-        appLock1 = appLock;
       });
     });
 
@@ -53,7 +51,6 @@ class _LockState extends State<Lock> {
                     final key = "Password";
                     final value = applockpass;
                     prefs.setString(key, value);
-                    print(verifyCode);
                     Navigator.of(context).maybePop();
                   },
                 );
@@ -62,7 +59,7 @@ class _LockState extends State<Lock> {
             ListTile(
               title: Text("Lock the application"),
               trailing: Switch(
-                value: appLock1,
+                value: appLock,
                 onChanged: (bool newappstate) async {
                   final prefs = await SharedPreferences.getInstance();
                   final key = 'lockState';
@@ -70,13 +67,10 @@ class _LockState extends State<Lock> {
                   prefs.setBool(key, value);
                   setState(() {
                     appLock = newappstate;
-                    appLock1 = newappstate;
                   });
                   if (newappstate == true) {
                     buildShowLockScreen(context);
-                  } else {
-                    print("AppUnlocked");
-                  }
+                  } else {}
                 },
               ),
             ),
@@ -87,7 +81,7 @@ class _LockState extends State<Lock> {
                 physics: ScrollPhysics(),
                 scrollDirection: Axis.vertical,
                 shrinkWrap: true,
-                itemCount: isLockedlist.length,
+                itemCount: allalbumlist.length,
                 itemBuilder: (context, index) {
                   return ListTile(
                       title: Text(isLockedlist[index].key),
@@ -97,22 +91,18 @@ class _LockState extends State<Lock> {
                             final prefs = await SharedPreferences.getInstance();
                             final key = "lockedlist";
                             final value = isLockedlist[index].key;
-                            final newlist = lockedlist.add(value);
-                            prefs.setStringList(key, lockedlist);
+                            List<String> newlist = lockedlist;
                             setState(() {
                               isLockedlist[index].locked = newvalue;
                               if (newvalue == true) {
-                                print(isLockedlist[index].key);
                                 lockedlist.add(isLockedlist[index].key);
-                                print(lockedlist);
                               } else {
                                 isLockedlist[index].locked = newvalue;
                                 if (newvalue == false) {
                                   lockedlist.remove(isLockedlist[index].key);
-                                  print(lockedlist);
                                 }
                               }
-                              ;
+                              prefs.setStringList(key, newlist);
                             });
                           }));
                 }),
@@ -141,9 +131,7 @@ class _LockState extends State<Lock> {
 
         return false;
       },
-      onUnlocked: () {
-        print('Unlocked.');
-      },
+      onUnlocked: () {},
     );
   }
 }
