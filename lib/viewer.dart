@@ -9,7 +9,8 @@ import 'package:swipedetector/swipedetector.dart';
 import 'package:transparent_image/transparent_image.dart';
 import 'package:video_player/video_player.dart';
 import 'package:esys_flutter_share/esys_flutter_share.dart';
-import 'package:gallery_app/main.dart';
+// import 'package:flutter_speed_dial/flutter_speed_dial.dart';
+// import 'package:wallpaper_manager/wallpaper_manager.dart';
 
 class ViewerPage extends StatefulWidget {
   final Medium medium;
@@ -42,12 +43,10 @@ class _ViewerPageState extends State<ViewerPage> {
           onPressed: () => Navigator.of(context).pop(),
           icon: Icon(Icons.arrow_back_ios),
         ),
-        // title: Text(date?.toLocal().toString()),
         actions: [
           IconButton(
             icon: Icon(Icons.share),
             onPressed: () async {
-              print(widget.medium.getFile());
               File file = await widget.medium.getFile();
               Uint8List imagebytes = await file.readAsBytes().then((value) {
                 Share.file('image', 'image.jpg', value, 'image/jpg',
@@ -93,6 +92,82 @@ class _ViewerPageState extends State<ViewerPage> {
                 ),
         ),
       ),
+      // floatingActionButton: SpeedDial(
+      //     marginRight: 18,
+      //     marginBottom: 20,
+      //     animatedIcon: AnimatedIcons.menu_close,
+      //     animatedIconTheme: IconThemeData(size: 22.0),
+      //     visible: true,
+      //     closeManually: false,
+      //     curve: Curves.bounceIn,
+      //     overlayColor: Colors.black,
+      //     overlayOpacity: 0.5,
+      //     onOpen: () => print('OPENING DIAL'),
+      //     onClose: () => print('DIAL CLOSED'),
+      //     backgroundColor: Colors.white,
+      //     foregroundColor: Colors.black,
+      //     elevation: 8.0,
+      //     shape: CircleBorder(),
+      //     children: [
+      //       SpeedDialChild(
+      //           child: Icon(Icons.wallpaper),
+      //           backgroundColor: Colors.red,
+      //           label: "Set as Wallpaper",
+      //           labelStyle:
+      //               TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+      //           labelBackgroundColor: Colors.black45,
+      //           onTap: () {
+      //             // WallpaperManager.setWallpaperFromAsset(
+      //             //     imageurl, WallpaperManager.HOME_SCREEN);
+      //             WallpaperManager.setWallpaper
+      //           }),
+      // SpeedDialChild(
+      //   child: Icon(Icons.lock),
+      //   backgroundColor: Colors.green,
+      //   label: "Set as LockScreen",
+      //   labelStyle: TextStyle(
+      //     fontSize: 20,
+      //     fontWeight: FontWeight.w500,
+      //   ),
+      //   labelBackgroundColor: Colors.black45,
+      //   onTap: () {
+      //     WallpaperManager.setWallpaperFromAsset(
+      //         imageurl, WallpaperManager.LOCK_SCREEN);
+      //   },
+      // ),
+      // SpeedDialChild(
+      //   child: Icon(Icons.panorama),
+      //   backgroundColor: Colors.blue,
+      //   label: "BOTH",
+      //   labelStyle: TextStyle(
+      //     fontSize: 20,
+      //     fontWeight: FontWeight.w500,
+      //   ),
+      //   labelBackgroundColor: Colors.black45,
+      //   onTap: () {
+      //     WallpaperManager.setWallpaperFromAsset(
+      //         imageurl, WallpaperManager.BOTH_SCREENS);
+      //   },
+      // ),
+      // ])
+      // bottomNavigationBar: BottomAppBar(
+      //   child: Row(
+      //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      //     children: [
+      //       IconButton(
+      //         icon: Icon(Icons.share),
+      //         onPressed: () async {
+      //           print(widget.medium.getFile());
+      //           File file = await widget.medium.getFile();
+      //           Uint8List imagebytes = await file.readAsBytes().then((value) {
+      //             Share.file('image', 'image.jpg', value, 'image/jpg',
+      //                 text: 'My optional text.');
+      //           });
+      //         },
+      //       )
+      //     ],
+      //   ),
+      // ),
     );
   }
 }

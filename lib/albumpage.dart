@@ -29,13 +29,8 @@ class AlbumPageState extends State<AlbumPage> {
     });
     for (int i = 0; i < _media.length; i++) {
       if (_media[i].id != null) {
-        print("Keri");
         allphotos.add(_media[i].id);
       }
-      // else {
-      //   print("break");
-      //   break;
-      // }
     }
   }
 

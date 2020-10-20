@@ -27,150 +27,165 @@
 23    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 23-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:9:5-81
 23-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:9:22-78
-24    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
-24-->[androidx.biometric:biometric:1.0.0-beta01] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\5403527ba017da42dd2413a70b830107\biometric-1.0.0-beta01\AndroidManifest.xml:24:5-72
-24-->[androidx.biometric:biometric:1.0.0-beta01] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\5403527ba017da42dd2413a70b830107\biometric-1.0.0-beta01\AndroidManifest.xml:24:22-69
-25    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
-25-->[androidx.biometric:biometric:1.0.0-beta01] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\5403527ba017da42dd2413a70b830107\biometric-1.0.0-beta01\AndroidManifest.xml:25:5-74
-25-->[androidx.biometric:biometric:1.0.0-beta01] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\5403527ba017da42dd2413a70b830107\biometric-1.0.0-beta01\AndroidManifest.xml:25:22-71
-26    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-26-->[com.google.android.exoplayer:exoplayer-core:2.9.6] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\e9aa22b8569cdf249df03848394fb6d2\jetified-exoplayer-core-2.9.6\AndroidManifest.xml:24:5-79
-26-->[com.google.android.exoplayer:exoplayer-core:2.9.6] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\e9aa22b8569cdf249df03848394fb6d2\jetified-exoplayer-core-2.9.6\AndroidManifest.xml:24:22-76
-27
-28    <application
-28-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:10:5-49:19
-29        android:name="io.flutter.app.FlutterApplication"
-29-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:12:9-57
-30        android:allowBackup="true"
-30-->[com.droidninja:filepicker:2.2.1] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\88f69513faf455e4813ae48009c9fdd8\filepicker-2.2.1\AndroidManifest.xml:15:9-35
-31        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-31-->[androidx.core:core:1.1.0] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\a528b13ac93e64cafa3d0480e2c93207\core-1.1.0\AndroidManifest.xml:24:18-86
-32        android:debuggable="true"
-33        android:icon="@mipmap/ic_launcher"
-33-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:14:9-43
-34        android:label="gallery_app"
-34-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:13:9-36
-35        android:requestLegacyExternalStorage="true"
-35-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:11:9-52
-36        android:supportsRtl="true" >
-36-->[com.droidninja:filepicker:2.2.1] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\88f69513faf455e4813ae48009c9fdd8\filepicker-2.2.1\AndroidManifest.xml:16:9-35
-37        <activity
-37-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:15:9-43:20
-38            android:name="com.example.gallery_app.MainActivity"
-38-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:16:13-41
-39            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
-39-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:19:13-163
-40            android:hardwareAccelerated="true"
-40-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:20:13-47
-41            android:launchMode="singleTop"
-41-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:17:13-43
-42            android:theme="@style/LaunchTheme"
-42-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:18:13-47
-43            android:windowSoftInputMode="adjustResize" >
-43-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:21:13-55
-44
-45            <!--
-46                 Specifies an Android theme to apply to this Activity as soon as
-47                 the Android process has started. This theme is visible to the user
-48                 while the Flutter UI initializes. After that, this theme continues
-49                 to determine the Window background behind the Flutter UI.
-50            -->
-51            <meta-data
-51-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:26:13-29:17
-52                android:name="io.flutter.embedding.android.NormalTheme"
-52-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:27:15-70
-53                android:resource="@style/NormalTheme" />
-53-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:28:15-52
-54            <!--
-55                 Displays an Android View that continues showing the launch screen
-56                 Drawable until Flutter paints its first frame, then this splash
-57                 screen fades out. A splash screen is useful to avoid any visual
-58                 gap between the end of Android's launch screen and the painting of
-59                 Flutter's first frame.
-60            -->
-61            <meta-data
-61-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:35:13-38:17
-62                android:name="io.flutter.embedding.android.SplashScreenDrawable"
-62-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:36:15-79
-63                android:resource="@drawable/launch_background" />
-63-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:37:15-61
-64
-65            <intent-filter>
-65-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:39:13-42:29
-66                <action android:name="android.intent.action.MAIN" />
-66-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:40:17-68
-66-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:40:25-66
-67
-68                <category android:name="android.intent.category.LAUNCHER" />
-68-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:41:17-76
-68-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:41:27-74
-69            </intent-filter>
-70        </activity>
-71        <!--
-72             Don't delete the meta-data below.
-73             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
-74        -->
-75        <meta-data
-75-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:46:9-48:33
-76            android:name="flutterEmbedding"
-76-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:47:13-44
-77            android:value="2" />
-77-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:48:13-30
-78
-79        <provider
-79-->[:esys_flutter_share] C:\Users\sarat\Documents\GitHub\gallery_app\build\esys_flutter_share\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-16:20
-80            android:name="de.esys.esysfluttershare.EsysFlutterShareFileProvider"
-80-->[:esys_flutter_share] C:\Users\sarat\Documents\GitHub\gallery_app\build\esys_flutter_share\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-81
-81            android:authorities="com.example.gallery_app.fileprovider.github.com/orgs/esysberlin/esys-flutter-share"
-81-->[:esys_flutter_share] C:\Users\sarat\Documents\GitHub\gallery_app\build\esys_flutter_share\intermediates\library_manifest\debug\AndroidManifest.xml:10:13-110
-82            android:exported="false"
-82-->[:esys_flutter_share] C:\Users\sarat\Documents\GitHub\gallery_app\build\esys_flutter_share\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-37
-83            android:grantUriPermissions="true" >
-83-->[:esys_flutter_share] C:\Users\sarat\Documents\GitHub\gallery_app\build\esys_flutter_share\intermediates\library_manifest\debug\AndroidManifest.xml:12:13-47
-84            <meta-data
-84-->[:esys_flutter_share] C:\Users\sarat\Documents\GitHub\gallery_app\build\esys_flutter_share\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-15:72
-85                android:name="android.support.FILE_PROVIDER_PATHS"
-85-->[:esys_flutter_share] C:\Users\sarat\Documents\GitHub\gallery_app\build\esys_flutter_share\intermediates\library_manifest\debug\AndroidManifest.xml:14:17-67
-86                android:resource="@xml/esys_flutter_share_filepaths" />
-86-->[:esys_flutter_share] C:\Users\sarat\Documents\GitHub\gallery_app\build\esys_flutter_share\intermediates\library_manifest\debug\AndroidManifest.xml:15:17-69
-87        </provider>
-88
-89        <activity
-89-->[androidx.biometric:biometric:1.0.0-beta01] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\5403527ba017da42dd2413a70b830107\biometric-1.0.0-beta01\AndroidManifest.xml:28:9-30:67
-90            android:name="androidx.biometric.DeviceCredentialHandlerActivity"
-90-->[androidx.biometric:biometric:1.0.0-beta01] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\5403527ba017da42dd2413a70b830107\biometric-1.0.0-beta01\AndroidManifest.xml:29:13-78
-91            android:theme="@style/DeviceCredentialHandlerTheme" />
-91-->[androidx.biometric:biometric:1.0.0-beta01] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\5403527ba017da42dd2413a70b830107\biometric-1.0.0-beta01\AndroidManifest.xml:30:13-64
-92        <activity
-92-->[com.droidninja:filepicker:2.2.1] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\88f69513faf455e4813ae48009c9fdd8\filepicker-2.2.1\AndroidManifest.xml:17:9-19:62
-93            android:name="droidninja.filepicker.FilePickerActivity"
-93-->[com.droidninja:filepicker:2.2.1] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\88f69513faf455e4813ae48009c9fdd8\filepicker-2.2.1\AndroidManifest.xml:18:13-68
-94            android:configChanges="orientation|screenSize" />
-94-->[com.droidninja:filepicker:2.2.1] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\88f69513faf455e4813ae48009c9fdd8\filepicker-2.2.1\AndroidManifest.xml:19:13-59
-95        <activity
-95-->[com.droidninja:filepicker:2.2.1] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\88f69513faf455e4813ae48009c9fdd8\filepicker-2.2.1\AndroidManifest.xml:20:9-22:62
-96            android:name="droidninja.filepicker.MediaDetailsActivity"
-96-->[com.droidninja:filepicker:2.2.1] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\88f69513faf455e4813ae48009c9fdd8\filepicker-2.2.1\AndroidManifest.xml:21:13-70
-97            android:configChanges="orientation|screenSize" />
-97-->[com.droidninja:filepicker:2.2.1] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\88f69513faf455e4813ae48009c9fdd8\filepicker-2.2.1\AndroidManifest.xml:22:13-59
-98
-99        <provider
-99-->[com.droidninja:filepicker:2.2.1] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\88f69513faf455e4813ae48009c9fdd8\filepicker-2.2.1\AndroidManifest.xml:24:9-32:20
-100            android:name="droidninja.filepicker.utils.FilePickerProvider"
-100-->[com.droidninja:filepicker:2.2.1] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\88f69513faf455e4813ae48009c9fdd8\filepicker-2.2.1\AndroidManifest.xml:25:13-74
-101            android:authorities="com.example.gallery_app.droidninja.filepicker.provider"
-101-->[com.droidninja:filepicker:2.2.1] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\88f69513faf455e4813ae48009c9fdd8\filepicker-2.2.1\AndroidManifest.xml:26:13-82
-102            android:exported="false"
-102-->[com.droidninja:filepicker:2.2.1] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\88f69513faf455e4813ae48009c9fdd8\filepicker-2.2.1\AndroidManifest.xml:27:13-37
-103            android:grantUriPermissions="true" >
-103-->[com.droidninja:filepicker:2.2.1] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\88f69513faf455e4813ae48009c9fdd8\filepicker-2.2.1\AndroidManifest.xml:28:13-47
-104            <meta-data
-104-->[:esys_flutter_share] C:\Users\sarat\Documents\GitHub\gallery_app\build\esys_flutter_share\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-15:72
-105                android:name="android.support.FILE_PROVIDER_PATHS"
-105-->[:esys_flutter_share] C:\Users\sarat\Documents\GitHub\gallery_app\build\esys_flutter_share\intermediates\library_manifest\debug\AndroidManifest.xml:14:17-67
-106                android:resource="@xml/provider_paths" />
-106-->[:esys_flutter_share] C:\Users\sarat\Documents\GitHub\gallery_app\build\esys_flutter_share\intermediates\library_manifest\debug\AndroidManifest.xml:15:17-69
-107        </provider>
-108    </application>
-109
-110</manifest>
+24    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+24-->[:wallpaper_manager] C:\Users\sarat\Documents\GitHub\gallery_app\build\wallpaper_manager\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-72
+24-->[:wallpaper_manager] C:\Users\sarat\Documents\GitHub\gallery_app\build\wallpaper_manager\intermediates\library_manifest\debug\AndroidManifest.xml:7:22-69
+25    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+25-->[androidx.biometric:biometric:1.0.0-beta01] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\5403527ba017da42dd2413a70b830107\biometric-1.0.0-beta01\AndroidManifest.xml:24:5-72
+25-->[androidx.biometric:biometric:1.0.0-beta01] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\5403527ba017da42dd2413a70b830107\biometric-1.0.0-beta01\AndroidManifest.xml:24:22-69
+26    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+26-->[androidx.biometric:biometric:1.0.0-beta01] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\5403527ba017da42dd2413a70b830107\biometric-1.0.0-beta01\AndroidManifest.xml:25:5-74
+26-->[androidx.biometric:biometric:1.0.0-beta01] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\5403527ba017da42dd2413a70b830107\biometric-1.0.0-beta01\AndroidManifest.xml:25:22-71
+27    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+27-->[com.google.android.exoplayer:exoplayer-core:2.9.6] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\e9aa22b8569cdf249df03848394fb6d2\jetified-exoplayer-core-2.9.6\AndroidManifest.xml:24:5-79
+27-->[com.google.android.exoplayer:exoplayer-core:2.9.6] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\e9aa22b8569cdf249df03848394fb6d2\jetified-exoplayer-core-2.9.6\AndroidManifest.xml:24:22-76
+28
+29    <application
+29-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:10:5-49:19
+30        android:name="io.flutter.app.FlutterApplication"
+30-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:12:9-57
+31        android:allowBackup="true"
+31-->[com.droidninja:filepicker:2.2.1] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\88f69513faf455e4813ae48009c9fdd8\filepicker-2.2.1\AndroidManifest.xml:15:9-35
+32        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+32-->[androidx.core:core:1.1.0] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\a528b13ac93e64cafa3d0480e2c93207\core-1.1.0\AndroidManifest.xml:24:18-86
+33        android:debuggable="true"
+34        android:icon="@mipmap/ic_launcher"
+34-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:14:9-43
+35        android:label="gallery_app"
+35-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:13:9-36
+36        android:requestLegacyExternalStorage="true"
+36-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:11:9-52
+37        android:supportsRtl="true" >
+37-->[com.droidninja:filepicker:2.2.1] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\88f69513faf455e4813ae48009c9fdd8\filepicker-2.2.1\AndroidManifest.xml:16:9-35
+38        <activity
+38-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:15:9-43:20
+39            android:name="com.example.gallery_app.MainActivity"
+39-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:16:13-41
+40            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+40-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:19:13-163
+41            android:hardwareAccelerated="true"
+41-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:20:13-47
+42            android:launchMode="singleTop"
+42-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:17:13-43
+43            android:theme="@style/LaunchTheme"
+43-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:18:13-47
+44            android:windowSoftInputMode="adjustResize" >
+44-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:21:13-55
+45
+46            <!--
+47                 Specifies an Android theme to apply to this Activity as soon as
+48                 the Android process has started. This theme is visible to the user
+49                 while the Flutter UI initializes. After that, this theme continues
+50                 to determine the Window background behind the Flutter UI.
+51            -->
+52            <meta-data
+52-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:26:13-29:17
+53                android:name="io.flutter.embedding.android.NormalTheme"
+53-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:27:15-70
+54                android:resource="@style/NormalTheme" />
+54-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:28:15-52
+55            <!--
+56                 Displays an Android View that continues showing the launch screen
+57                 Drawable until Flutter paints its first frame, then this splash
+58                 screen fades out. A splash screen is useful to avoid any visual
+59                 gap between the end of Android's launch screen and the painting of
+60                 Flutter's first frame.
+61            -->
+62            <meta-data
+62-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:35:13-38:17
+63                android:name="io.flutter.embedding.android.SplashScreenDrawable"
+63-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:36:15-79
+64                android:resource="@drawable/launch_background" />
+64-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:37:15-61
+65
+66            <intent-filter>
+66-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:39:13-42:29
+67                <action android:name="android.intent.action.MAIN" />
+67-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:40:17-68
+67-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:40:25-66
+68
+69                <category android:name="android.intent.category.LAUNCHER" />
+69-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:41:17-76
+69-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:41:27-74
+70            </intent-filter>
+71        </activity>
+72        <!--
+73             Don't delete the meta-data below.
+74             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+75        -->
+76        <meta-data
+76-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:46:9-48:33
+77            android:name="flutterEmbedding"
+77-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:47:13-44
+78            android:value="2" />
+78-->C:\Users\sarat\Documents\GitHub\gallery_app\android\app\src\main\AndroidManifest.xml:48:13-30
+79
+80        <provider
+80-->[:esys_flutter_share] C:\Users\sarat\Documents\GitHub\gallery_app\build\esys_flutter_share\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-16:20
+81            android:name="de.esys.esysfluttershare.EsysFlutterShareFileProvider"
+81-->[:esys_flutter_share] C:\Users\sarat\Documents\GitHub\gallery_app\build\esys_flutter_share\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-81
+82            android:authorities="com.example.gallery_app.fileprovider.github.com/orgs/esysberlin/esys-flutter-share"
+82-->[:esys_flutter_share] C:\Users\sarat\Documents\GitHub\gallery_app\build\esys_flutter_share\intermediates\library_manifest\debug\AndroidManifest.xml:10:13-110
+83            android:exported="false"
+83-->[:esys_flutter_share] C:\Users\sarat\Documents\GitHub\gallery_app\build\esys_flutter_share\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-37
+84            android:grantUriPermissions="true" >
+84-->[:esys_flutter_share] C:\Users\sarat\Documents\GitHub\gallery_app\build\esys_flutter_share\intermediates\library_manifest\debug\AndroidManifest.xml:12:13-47
+85            <meta-data
+85-->[:esys_flutter_share] C:\Users\sarat\Documents\GitHub\gallery_app\build\esys_flutter_share\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-15:72
+86                android:name="android.support.FILE_PROVIDER_PATHS"
+86-->[:esys_flutter_share] C:\Users\sarat\Documents\GitHub\gallery_app\build\esys_flutter_share\intermediates\library_manifest\debug\AndroidManifest.xml:14:17-67
+87                android:resource="@xml/esys_flutter_share_filepaths" />
+87-->[:esys_flutter_share] C:\Users\sarat\Documents\GitHub\gallery_app\build\esys_flutter_share\intermediates\library_manifest\debug\AndroidManifest.xml:15:17-69
+88        </provider>
+89
+90        <activity
+90-->[:wallpaper_manager] C:\Users\sarat\Documents\GitHub\gallery_app\build\wallpaper_manager\intermediates\library_manifest\debug\AndroidManifest.xml:11:9-16:58
+91            android:name="com.mulgundkar.wallpaper_manager.EmbeddingV1Activity"
+91-->[:wallpaper_manager] C:\Users\sarat\Documents\GitHub\gallery_app\build\wallpaper_manager\intermediates\library_manifest\debug\AndroidManifest.xml:12:13-80
+92            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale"
+92-->[:wallpaper_manager] C:\Users\sarat\Documents\GitHub\gallery_app\build\wallpaper_manager\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-116
+93            android:hardwareAccelerated="true"
+93-->[:wallpaper_manager] C:\Users\sarat\Documents\GitHub\gallery_app\build\wallpaper_manager\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-47
+94            android:theme="@style/LaunchTheme"
+94-->[:wallpaper_manager] C:\Users\sarat\Documents\GitHub\gallery_app\build\wallpaper_manager\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-47
+95            android:windowSoftInputMode="adjustResize" />
+95-->[:wallpaper_manager] C:\Users\sarat\Documents\GitHub\gallery_app\build\wallpaper_manager\intermediates\library_manifest\debug\AndroidManifest.xml:16:13-55
+96        <activity
+96-->[androidx.biometric:biometric:1.0.0-beta01] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\5403527ba017da42dd2413a70b830107\biometric-1.0.0-beta01\AndroidManifest.xml:28:9-30:67
+97            android:name="androidx.biometric.DeviceCredentialHandlerActivity"
+97-->[androidx.biometric:biometric:1.0.0-beta01] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\5403527ba017da42dd2413a70b830107\biometric-1.0.0-beta01\AndroidManifest.xml:29:13-78
+98            android:theme="@style/DeviceCredentialHandlerTheme" />
+98-->[androidx.biometric:biometric:1.0.0-beta01] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\5403527ba017da42dd2413a70b830107\biometric-1.0.0-beta01\AndroidManifest.xml:30:13-64
+99        <activity
+99-->[com.droidninja:filepicker:2.2.1] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\88f69513faf455e4813ae48009c9fdd8\filepicker-2.2.1\AndroidManifest.xml:17:9-19:62
+100            android:name="droidninja.filepicker.FilePickerActivity"
+100-->[com.droidninja:filepicker:2.2.1] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\88f69513faf455e4813ae48009c9fdd8\filepicker-2.2.1\AndroidManifest.xml:18:13-68
+101            android:configChanges="orientation|screenSize" />
+101-->[com.droidninja:filepicker:2.2.1] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\88f69513faf455e4813ae48009c9fdd8\filepicker-2.2.1\AndroidManifest.xml:19:13-59
+102        <activity
+102-->[com.droidninja:filepicker:2.2.1] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\88f69513faf455e4813ae48009c9fdd8\filepicker-2.2.1\AndroidManifest.xml:20:9-22:62
+103            android:name="droidninja.filepicker.MediaDetailsActivity"
+103-->[com.droidninja:filepicker:2.2.1] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\88f69513faf455e4813ae48009c9fdd8\filepicker-2.2.1\AndroidManifest.xml:21:13-70
+104            android:configChanges="orientation|screenSize" />
+104-->[com.droidninja:filepicker:2.2.1] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\88f69513faf455e4813ae48009c9fdd8\filepicker-2.2.1\AndroidManifest.xml:22:13-59
+105
+106        <provider
+106-->[com.droidninja:filepicker:2.2.1] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\88f69513faf455e4813ae48009c9fdd8\filepicker-2.2.1\AndroidManifest.xml:24:9-32:20
+107            android:name="droidninja.filepicker.utils.FilePickerProvider"
+107-->[com.droidninja:filepicker:2.2.1] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\88f69513faf455e4813ae48009c9fdd8\filepicker-2.2.1\AndroidManifest.xml:25:13-74
+108            android:authorities="com.example.gallery_app.droidninja.filepicker.provider"
+108-->[com.droidninja:filepicker:2.2.1] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\88f69513faf455e4813ae48009c9fdd8\filepicker-2.2.1\AndroidManifest.xml:26:13-82
+109            android:exported="false"
+109-->[com.droidninja:filepicker:2.2.1] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\88f69513faf455e4813ae48009c9fdd8\filepicker-2.2.1\AndroidManifest.xml:27:13-37
+110            android:grantUriPermissions="true" >
+110-->[com.droidninja:filepicker:2.2.1] C:\Users\sarat\.gradle\caches\transforms-2\files-2.1\88f69513faf455e4813ae48009c9fdd8\filepicker-2.2.1\AndroidManifest.xml:28:13-47
+111            <meta-data
+111-->[:esys_flutter_share] C:\Users\sarat\Documents\GitHub\gallery_app\build\esys_flutter_share\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-15:72
+112                android:name="android.support.FILE_PROVIDER_PATHS"
+112-->[:esys_flutter_share] C:\Users\sarat\Documents\GitHub\gallery_app\build\esys_flutter_share\intermediates\library_manifest\debug\AndroidManifest.xml:14:17-67
+113                android:resource="@xml/provider_paths" />
+113-->[:esys_flutter_share] C:\Users\sarat\Documents\GitHub\gallery_app\build\esys_flutter_share\intermediates\library_manifest\debug\AndroidManifest.xml:15:17-69
+114        </provider>
+115    </application>
+116
+117</manifest>

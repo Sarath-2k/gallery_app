@@ -21,6 +21,7 @@
     -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
     <uses-permission android:name="android.permission.USE_BIOMETRIC" />
     <uses-permission android:name="android.permission.USE_FINGERPRINT" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -86,6 +87,12 @@
                 android:resource="@xml/esys_flutter_share_filepaths" />
         </provider>
 
+        <activity
+            android:name="com.mulgundkar.wallpaper_manager.EmbeddingV1Activity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale"
+            android:hardwareAccelerated="true"
+            android:theme="@style/LaunchTheme"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name="androidx.biometric.DeviceCredentialHandlerActivity"
             android:theme="@style/DeviceCredentialHandlerTheme" />

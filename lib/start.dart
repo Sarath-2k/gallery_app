@@ -31,7 +31,7 @@ class Start extends StatelessWidget {
 
           return false;
         },
-        onUnlocked: () => print('Unlocked.'),
+        onUnlocked: () {},
       );
     } else {
       return Home();

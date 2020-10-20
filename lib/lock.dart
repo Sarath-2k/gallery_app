@@ -82,7 +82,7 @@ class _LockState extends State<Lock> {
                 physics: ScrollPhysics(),
                 scrollDirection: Axis.vertical,
                 shrinkWrap: true,
-                itemCount: allalbumlist.length,
+                itemCount: isLockedlist.length,
                 itemBuilder: (context, index) {
                   return ListTile(
                       title: Text(isLockedlist[index].key),
@@ -91,8 +91,7 @@ class _LockState extends State<Lock> {
                           onChanged: (bool newvalue) async {
                             final prefs = await SharedPreferences.getInstance();
                             final key = "lockedlist";
-                            final value = isLockedlist[index].key;
-                            List<String> newlist = lockedlist;
+                            final value = isLockedlist[index].locked;
                             setState(() {
                               isLockedlist[index].locked = newvalue;
                               if (newvalue == true) {
@@ -103,7 +102,7 @@ class _LockState extends State<Lock> {
                                   lockedlist.remove(isLockedlist[index].key);
                                 }
                               }
-                              prefs.setStringList(key, newlist);
+                              prefs.setStringList(key, lockedlist);
                             });
                           }));
                 }),

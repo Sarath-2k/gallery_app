@@ -1,0 +1,31 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.mulgundkar.wallpaper_manager" >
+4
+5    <uses-sdk android:minSdkVersion="16" />
+5-->C:\Users\sarat\Documents\Flutter\flutter\.pub-cache\hosted\pub.dartlang.org\wallpaper_manager-1.0.10\android\src\main\AndroidManifest.xml
+6
+7    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+7-->C:\Users\sarat\Documents\Flutter\flutter\.pub-cache\hosted\pub.dartlang.org\wallpaper_manager-1.0.10\android\src\main\AndroidManifest.xml:4:5-72
+7-->C:\Users\sarat\Documents\Flutter\flutter\.pub-cache\hosted\pub.dartlang.org\wallpaper_manager-1.0.10\android\src\main\AndroidManifest.xml:4:22-69
+8    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+8-->C:\Users\sarat\Documents\Flutter\flutter\.pub-cache\hosted\pub.dartlang.org\wallpaper_manager-1.0.10\android\src\main\AndroidManifest.xml:5:5-80
+8-->C:\Users\sarat\Documents\Flutter\flutter\.pub-cache\hosted\pub.dartlang.org\wallpaper_manager-1.0.10\android\src\main\AndroidManifest.xml:5:22-77
+9
+10    <application>
+10-->C:\Users\sarat\Documents\Flutter\flutter\.pub-cache\hosted\pub.dartlang.org\wallpaper_manager-1.0.10\android\src\main\AndroidManifest.xml:6:5-13:19
+11        <activity
+11-->C:\Users\sarat\Documents\Flutter\flutter\.pub-cache\hosted\pub.dartlang.org\wallpaper_manager-1.0.10\android\src\main\AndroidManifest.xml:7:9-12:15
+12            android:name="com.mulgundkar.wallpaper_manager.EmbeddingV1Activity"
+12-->C:\Users\sarat\Documents\Flutter\flutter\.pub-cache\hosted\pub.dartlang.org\wallpaper_manager-1.0.10\android\src\main\AndroidManifest.xml:7:19-54
+13            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale"
+13-->C:\Users\sarat\Documents\Flutter\flutter\.pub-cache\hosted\pub.dartlang.org\wallpaper_manager-1.0.10\android\src\main\AndroidManifest.xml:9:13-116
+14            android:hardwareAccelerated="true"
+14-->C:\Users\sarat\Documents\Flutter\flutter\.pub-cache\hosted\pub.dartlang.org\wallpaper_manager-1.0.10\android\src\main\AndroidManifest.xml:10:13-47
+15            android:theme="@style/LaunchTheme"
+15-->C:\Users\sarat\Documents\Flutter\flutter\.pub-cache\hosted\pub.dartlang.org\wallpaper_manager-1.0.10\android\src\main\AndroidManifest.xml:8:13-47
+16            android:windowSoftInputMode="adjustResize" />
+16-->C:\Users\sarat\Documents\Flutter\flutter\.pub-cache\hosted\pub.dartlang.org\wallpaper_manager-1.0.10\android\src\main\AndroidManifest.xml:11:13-55
+17    </application>
+18
+19</manifest>

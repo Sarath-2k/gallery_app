@@ -198,9 +198,7 @@ class _HomeState extends State<Home> {
 
           return false;
         },
-        onUnlocked: () {
-          // print('Unlocked.');
-        },
+        onUnlocked: () {},
       );
     } else {}
   }

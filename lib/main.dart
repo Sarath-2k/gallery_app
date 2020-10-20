@@ -78,14 +78,13 @@ class _LockCheckState extends State<LockCheck> {
       setState(() {});
     });
 
-    // lock();
     PhotoGallery.listAlbums(mediumType: MediumType.image).then((value) {
       value.forEach((element) {
         isLockedlist.add(IsLocked(key: element.name, locked: false));
-        // print(element.name);
         allalbumlist.add(element.name);
       });
 
+      lock();
       lockScreenfn(context);
     });
 
@@ -133,22 +132,15 @@ bool appLock;
 String applockpass = "1234";
 SharedPreferences sharedPreferences;
 List<Medium> imagemedium;
-List<String> lockedlist = ['application'];
-List<String> templockedlist = ['application'];
+List<String> lockedlist = [];
+List<String> templockedlist = [];
 List<String> allalbumlist = [];
-// lock() {
-//   print("THODANGI");
-//   if (isLockedlist.length != lockedlist) {
-//     print("ULLIL KERI0");
-//     for (int i = 0; i < lockedlist.length; i++) {
-//       print("ULLIL KERI1");
-//       for (String name in lockedlist) {
-//         print("ULLIL KERI2");
-//         if (isLockedlist[i].key == name) {
-//           print("ULLIL KERI3");
-//           isLockedlist[i].locked = true;
-//         }
-//       }
-//     }
-//   }
-// }
+lock() {
+  for (int j = 0; j < isLockedlist.length; j++) {
+    for (String name in lockedlist) {
+      if (isLockedlist[j].key == name) {
+        isLockedlist[j].locked = true;
+      }
+    }
+  }
+}
