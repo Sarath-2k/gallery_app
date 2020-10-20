@@ -28,17 +28,8 @@
     <string msgid="9009661856846212431" name="abc_shareactionprovider_share_with_application">"Compartilhar com <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
     <string msgid="6389460216547290468" name="abc_toolbar_collapse_description">"Recolher"</string>
     <string msgid="6241458715391513061" name="accessibility_fingerprint_dialog_help_area">"Área da mensagem de ajuda"</string>
-    <string name="action_settings">Configurações</string>
-    <string name="all_files">Todos os arquivos</string>
-    <string name="all_images">Todas as imagens</string>
-    <string name="all_photos">Todas as fotos</string>
-    <string name="all_videos">Todos os vídeos</string>
-    <string formatted="false" name="attachments_num">%d</string>
-    <string formatted="false" name="attachments_title_text">(%d/%d)</string>
     <string msgid="4296851028928624518" name="confirm_device_credential_password">"Usar senha"</string>
     <string msgid="7497355367608150274" name="default_error_msg">"Erro desconhecido"</string>
-    <string name="done">Pronto</string>
-    <string name="excel_title">XLS</string>
     <string msgid="5354590751262189738" name="fingerprint_dialog_touch_sensor">"Toque no sensor de digital"</string>
     <string msgid="3976825677335166260" name="fingerprint_error_hw_not_available">"Hardware de impressão digital não disponível."</string>
     <string msgid="1176237289575184578" name="fingerprint_error_hw_not_present">"Este dispositivo não tem um sensor de impressão digital"</string>
@@ -47,18 +38,6 @@
     <string msgid="3421037373085129417" name="fingerprint_error_user_canceled">"Operação de impressão digital cancelada pelo usuário."</string>
     <string msgid="5491287833813257925" name="fingerprint_not_recognized">"Não reconhecido"</string>
     <string msgid="7474799539658018076" name="generic_error_user_canceled">"Autenticação cancelada pelo usuário."</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="images">Imagens</string>
-    <string name="no_camera_exists">Nenhum aplicativo de câmera foi detectado!</string>
-    <string name="no_files_found">Nenhum arquivo encontrado</string>
-    <string name="pdf_title">PDF</string>
-    <string name="permission_filepicker_rationale">É necessária permissão de armazenamento para acessar arquivos.</string>
-    <string name="ppt_title">PPT</string>
     <string msgid="730395136688082741" name="search_menu_title">"Pesquisar"</string>
-    <string name="select_doc_text">Selecione um documento</string>
-    <string name="select_photo_text">Selecione um arquivo de mídia</string>
     <string msgid="8106346172024741305" name="status_bar_notification_info_overflow">"999+"</string>
-    <string name="txt_title">TXT</string>
-    <string name="videos">Vídeos</string>
-    <string name="word_title">DOC</string>
 </resources>

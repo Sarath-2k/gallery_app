@@ -32,6 +32,7 @@ class AlbumPageState extends State<AlbumPage> {
         allphotos.add(_media[i].id);
       }
     }
+    medlist = _media;
   }
 
   @override
@@ -88,5 +89,6 @@ class AlbumPageState extends State<AlbumPage> {
 }
 
 List<String> allphotos = [];
+List<Medium> medlist = [];
 String albumfirst;
 String albumlast;

@@ -9,8 +9,8 @@ import 'package:swipedetector/swipedetector.dart';
 import 'package:transparent_image/transparent_image.dart';
 import 'package:video_player/video_player.dart';
 import 'package:esys_flutter_share/esys_flutter_share.dart';
-// import 'package:flutter_speed_dial/flutter_speed_dial.dart';
-// import 'package:wallpaper_manager/wallpaper_manager.dart';
+import 'package:flutter_speed_dial/flutter_speed_dial.dart';
+import 'package:wallpaper_manager/wallpaper_manager.dart';
 
 class ViewerPage extends StatefulWidget {
   final Medium medium;
@@ -30,145 +30,137 @@ class _ViewerPageState extends State<ViewerPage> {
         current = i;
       }
     }
+    widget.medium.getFile().then((value) => {path = value.path.toString()});
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
     DateTime date = widget.medium.creationDate ?? widget.medium.modifiedDate;
+
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.black,
-        leading: IconButton(
-          onPressed: () => Navigator.of(context).pop(),
-          icon: Icon(Icons.arrow_back_ios),
+        appBar: AppBar(
+          backgroundColor: Colors.black,
+          leading: IconButton(
+            onPressed: () => Navigator.of(context).pop(),
+            icon: Icon(Icons.arrow_back_ios),
+          ),
+          actions: [
+            IconButton(
+              icon: Icon(Icons.share),
+              onPressed: () async {
+                File file = await widget.medium.getFile();
+                Uint8List imagebytes = await file.readAsBytes().then((value) {
+                  Share.file('image', 'image.jpg', value, 'image/jpg',
+                      text: 'My optional text.');
+                });
+              },
+            )
+          ],
         ),
-        actions: [
-          IconButton(
-            icon: Icon(Icons.share),
-            onPressed: () async {
-              File file = await widget.medium.getFile();
-              Uint8List imagebytes = await file.readAsBytes().then((value) {
-                Share.file('image', 'image.jpg', value, 'image/jpg',
-                    text: 'My optional text.');
-              });
-            },
-          )
-        ],
-      ),
-      body: SwipeDetector(
-        onSwipeLeft: () {
-          setState(() {
-            if (current != allphotos.length - 1) {
-              pic = PhotoProvider(mediumId: allphotos[current + 1]);
-              current = current + 1;
-            } else {
-              pic = PhotoProvider(mediumId: allphotos[0]);
-              current = 0;
-            }
-          });
-        },
-        onSwipeRight: () {
-          setState(() {
-            if (current != 0) {
-              pic = PhotoProvider(mediumId: allphotos[current - 1]);
-              current = current - 1;
-            } else {
-              pic = PhotoProvider(mediumId: allphotos[allphotos.length - 1]);
-              current = allphotos.length - 1;
-            }
-          });
-        },
-        child: Container(
-          alignment: Alignment.center,
-          child: widget.medium.mediumType == MediumType.image
-              ? FadeInImage(
-                  fit: BoxFit.cover,
-                  placeholder: MemoryImage(kTransparentImage),
-                  image: pic,
-                )
-              : VideoProvider(
-                  mediumId: widget.medium.id,
+        body: SwipeDetector(
+          onSwipeLeft: () {
+            setState(() {
+              pathget();
+              if (current != allphotos.length - 1) {
+                pic = PhotoProvider(mediumId: allphotos[current + 1]);
+                current = current + 1;
+                pathget();
+              } else {
+                pic = PhotoProvider(mediumId: allphotos[0]);
+                current = 0;
+                pathget();
+              }
+            });
+          },
+          onSwipeRight: () {
+            setState(() {
+              pathget();
+              if (current != 0) {
+                pic = PhotoProvider(mediumId: allphotos[current - 1]);
+                current = current - 1;
+                pathget();
+              } else {
+                pic = PhotoProvider(mediumId: allphotos[allphotos.length - 1]);
+                current = allphotos.length - 1;
+                pathget();
+              }
+            });
+          },
+          child: Container(
+            alignment: Alignment.center,
+            child: widget.medium.mediumType == MediumType.image
+                ? FadeInImage(
+                    fit: BoxFit.cover,
+                    placeholder: MemoryImage(kTransparentImage),
+                    image: pic,
+                  )
+                : VideoProvider(
+                    mediumId: widget.medium.id,
+                  ),
+          ),
+        ),
+        floatingActionButton: SpeedDial(
+            marginRight: 18,
+            marginBottom: 20,
+            animatedIcon: AnimatedIcons.menu_close,
+            animatedIconTheme: IconThemeData(size: 22.0),
+            visible: true,
+            closeManually: false,
+            curve: Curves.bounceIn,
+            overlayColor: Colors.black,
+            overlayOpacity: 0.5,
+            onOpen: () => print('OPENING DIAL'),
+            onClose: () => print('DIAL CLOSED'),
+            backgroundColor: Colors.white,
+            foregroundColor: Colors.black,
+            elevation: 8.0,
+            shape: CircleBorder(),
+            children: [
+              SpeedDialChild(
+                  child: Icon(Icons.wallpaper),
+                  backgroundColor: Colors.red,
+                  label: "Set as Wallpaper",
+                  labelStyle:
+                      TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                  labelBackgroundColor: Colors.black45,
+                  onTap: () {
+                    WallpaperManager.setWallpaperFromFile(
+                        path, WallpaperManager.HOME_SCREEN);
+                  }),
+              SpeedDialChild(
+                child: Icon(Icons.lock),
+                backgroundColor: Colors.green,
+                label: "Set as LockScreen",
+                labelStyle: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w500,
                 ),
-        ),
-      ),
-      // floatingActionButton: SpeedDial(
-      //     marginRight: 18,
-      //     marginBottom: 20,
-      //     animatedIcon: AnimatedIcons.menu_close,
-      //     animatedIconTheme: IconThemeData(size: 22.0),
-      //     visible: true,
-      //     closeManually: false,
-      //     curve: Curves.bounceIn,
-      //     overlayColor: Colors.black,
-      //     overlayOpacity: 0.5,
-      //     onOpen: () => print('OPENING DIAL'),
-      //     onClose: () => print('DIAL CLOSED'),
-      //     backgroundColor: Colors.white,
-      //     foregroundColor: Colors.black,
-      //     elevation: 8.0,
-      //     shape: CircleBorder(),
-      //     children: [
-      //       SpeedDialChild(
-      //           child: Icon(Icons.wallpaper),
-      //           backgroundColor: Colors.red,
-      //           label: "Set as Wallpaper",
-      //           labelStyle:
-      //               TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
-      //           labelBackgroundColor: Colors.black45,
-      //           onTap: () {
-      //             // WallpaperManager.setWallpaperFromAsset(
-      //             //     imageurl, WallpaperManager.HOME_SCREEN);
-      //             WallpaperManager.setWallpaper
-      //           }),
-      // SpeedDialChild(
-      //   child: Icon(Icons.lock),
-      //   backgroundColor: Colors.green,
-      //   label: "Set as LockScreen",
-      //   labelStyle: TextStyle(
-      //     fontSize: 20,
-      //     fontWeight: FontWeight.w500,
-      //   ),
-      //   labelBackgroundColor: Colors.black45,
-      //   onTap: () {
-      //     WallpaperManager.setWallpaperFromAsset(
-      //         imageurl, WallpaperManager.LOCK_SCREEN);
-      //   },
-      // ),
-      // SpeedDialChild(
-      //   child: Icon(Icons.panorama),
-      //   backgroundColor: Colors.blue,
-      //   label: "BOTH",
-      //   labelStyle: TextStyle(
-      //     fontSize: 20,
-      //     fontWeight: FontWeight.w500,
-      //   ),
-      //   labelBackgroundColor: Colors.black45,
-      //   onTap: () {
-      //     WallpaperManager.setWallpaperFromAsset(
-      //         imageurl, WallpaperManager.BOTH_SCREENS);
-      //   },
-      // ),
-      // ])
-      // bottomNavigationBar: BottomAppBar(
-      //   child: Row(
-      //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      //     children: [
-      //       IconButton(
-      //         icon: Icon(Icons.share),
-      //         onPressed: () async {
-      //           print(widget.medium.getFile());
-      //           File file = await widget.medium.getFile();
-      //           Uint8List imagebytes = await file.readAsBytes().then((value) {
-      //             Share.file('image', 'image.jpg', value, 'image/jpg',
-      //                 text: 'My optional text.');
-      //           });
-      //         },
-      //       )
-      //     ],
-      //   ),
-      // ),
-    );
+                labelBackgroundColor: Colors.black45,
+                onTap: () {
+                  WallpaperManager.setWallpaperFromFile(
+                      path, WallpaperManager.LOCK_SCREEN);
+                },
+              ),
+              SpeedDialChild(
+                child: Icon(Icons.panorama),
+                backgroundColor: Colors.blue,
+                label: "BOTH",
+                labelStyle: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w500,
+                ),
+                labelBackgroundColor: Colors.black45,
+                onTap: () {
+                  WallpaperManager.setWallpaperFromFile(
+                      path, WallpaperManager.BOTH_SCREENS);
+                },
+              ),
+            ]));
+  }
+
+  pathget() {
+    medlist[current].getFile().then((value) => {path = value.path.toString()});
   }
 }
 
@@ -200,7 +192,6 @@ class _VideoProviderState extends State<VideoProvider> {
       _file = await PhotoGallery.getFile(mediumId: widget.mediumId);
       _controller = VideoPlayerController.file(_file);
       _controller.initialize().then((_) {
-        // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
         setState(() {});
       });
     } catch (e) {
@@ -237,3 +228,5 @@ class _VideoProviderState extends State<VideoProvider> {
 }
 
 int current;
+
+String path = "";
